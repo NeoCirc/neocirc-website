@@ -7,4 +7,5 @@ This repository will contain the frontend code for the platform.
 Khelan Modi\
 Valentin Stelea\
 Sebastian Wilson\
-Kevin Quayle
+Kevin Quayle\
+Masaki Asanuma
