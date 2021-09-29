@@ -5,7 +5,7 @@ This repository will contain the frontend code for the platform.
 
 # Team Members: 
 Khelan Modi\
-Vali Stelea\
+Valentin Stelea\
 Sebastian Wilson\
 Kevin Quayle\
 Masaki Asanuma
