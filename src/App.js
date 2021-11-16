@@ -1,11 +1,20 @@
 import { SideBar } from './components/SideBar';
+import styled from 'styled-components';
 
 const App = () => {
   return (
-    <div>
+    <Wrap>
       <SideBar />
-    </div>
+      <h1 style={{ paddingLeft: '50px' }}>
+        Welcome
+      </h1>
+    </Wrap>
   );
 }
+
+const Wrap = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 
 export { App };
