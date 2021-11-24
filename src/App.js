@@ -1,13 +1,12 @@
 import { SideBar } from './components/SideBar';
+import { ModuleSelectionPage } from './components/modules/ModuleSelectionPage';
 import styled from 'styled-components';
 
 const App = () => {
   return (
     <Wrap>
       <SideBar />
-      <h1 style={{ paddingLeft: '50px' }}>
-        Welcome
-      </h1>
+      <ModuleSelectionPage />
     </Wrap>
   );
 }
