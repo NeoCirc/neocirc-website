@@ -4,6 +4,9 @@ import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import { ModuleContent1 } from './content/ModuleContent1';
 import { ModuleContent2 } from './content/ModuleContent2';
+import { Card } from 'react-bootstrap';
+import { BsFillLockFill } from "react-icons/bs";
+import { BsUnlockFill } from "react-icons/bs";
 
 const ModuleSelectionPage = () => {
     /*
@@ -36,26 +39,50 @@ const ModuleSelectionPage = () => {
                 to make the selection pages
             */}
             { selection === 0 && <div>
-                <Button
-                    as={Col}
-                    variant="outline-primary"
-                    onClick={() => {
-                        // If Module #1 button is clicked, set the selection variable to 1
-                        setSelection(1);
-                    }}
-                >
-                    Module #1
-                </Button>
-                <Button
-                    as={Col}
-                    variant="outline-primary"
-                    onClick={() => {
-                        // If Module #2 button is clicked, set the selection variable to 2
-                        setSelection(2);
-                    }}
-                >
-                    Module #2
-                </Button>
+            <br></br>
+
+            <Card style={{ width: '79rem' }}>
+                <Card.Header><BsUnlockFill color="black" size={20}/>  Module 1</Card.Header>
+                <Card.Body>
+                    <Card.Title>Introduction to NeoCirc</Card.Title>
+                    <Card.Text>
+                        Learn the basics regarding our organization and how our modules work. 
+                    </Card.Text>
+                    <Button variant="primary"
+                        onClick={() => {
+                            // If Module #1 button is clicked, set the selection variable to 1
+                            setSelection(1);
+                        }}
+                    >   Explore Module
+                    </Button>
+                </Card.Body>
+            </Card>
+            <br></br>
+            <Card style={{ width: '79rem' }}>
+                <Card.Header><BsUnlockFill color="black" size={20}/> Module 2</Card.Header>
+                <Card.Body>
+                    <Card.Title>Benefits of Neonatal Circumcision</Card.Title>
+                    <Card.Text>
+                        Circumcision is a rather debated field, however in this module we will illustrate the benefits of this medical procedure.
+                    </Card.Text>
+                    <Button variant="primary"
+                        onClick={() => {
+                            // If Module #2 button is clicked, set the selection variable to 2
+                            setSelection(2);
+                        }}
+                    >   Explore Module
+                    </Button>
+                </Card.Body>
+            </Card>
+            <br></br>
+            <Card style={{ width: '79rem' }}>
+                <Card.Header><BsFillLockFill color="black" size={20}/>  Module 3</Card.Header>
+                <Card.Body>
+                    <Card.Text>
+                        <center>Complete Module 1 & Module 2 before continuing. </center>
+                    </Card.Text>
+                </Card.Body>
+            </Card>
             </div> }
 
             {/* If selection == 1, set the page to the module content #1 */}
