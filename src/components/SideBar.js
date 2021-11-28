@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 const SideBar = () => {
     const [collapsed, setCollapsed] = useState(true);
-    return (<div>
+    return (
         <SideBarWrap
             collapsed={collapsed}
         >
@@ -31,11 +31,12 @@ const SideBar = () => {
                 <FooterWrap>NeoCirc LLC</FooterWrap>
             </SidebarFooter>}
         </SideBarWrap>
-    </div>);
+    );
 }
 
 const SideBarWrap = styled(ProSidebar)`
     height: 100vh;
+    position: fixed;
 `;
 
 const FooterWrap = styled.div`

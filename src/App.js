@@ -5,7 +5,9 @@ import styled from 'styled-components';
 const App = () => {
   return (
     <Wrap>
-      <SideBar />
+      <SideBarWrap>
+        <SideBar />
+      </SideBarWrap>
       <ModuleSelectionPage />
     </Wrap>
   );
@@ -14,6 +16,10 @@ const App = () => {
 const Wrap = styled.div`
   display: flex;
   flex-direction: row;
+`;
+
+const SideBarWrap = styled.div`
+  padding-right: 75px;
 `;
 
 export { App };

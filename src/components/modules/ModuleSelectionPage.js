@@ -20,8 +20,9 @@ const ModuleSelectionPage = () => {
     // Headers for corresponding pages based on selection state
     const headers = [
         'Module Selection Page',
-        'Content #1',
-        'Content #2',
+        '',
+        '',
+        'Quiz'
     ];
 
     return (
@@ -96,10 +97,21 @@ const ModuleSelectionPage = () => {
                 as={Col}
                 variant="outline-primary"
                 onClick={() => setSelection(0)}
-                style={{ marginTop: '20px' }}
+                style={{ marginTop: '20px', height: "40px", width: "50%"}}
             >
                 Back
-            </Button> }
+            </Button>
+            }
+
+            {(selection === 1 || selection === 2) && <Button
+                as={Col}
+                variant="outline-primary"
+                onClick={() => setSelection(3)}
+                style={{ marginTop: '20px', height: "40px", width: "50%" }}
+            >
+                Take Quiz
+            </Button>
+            }
         </Wrap>
     );
 };
