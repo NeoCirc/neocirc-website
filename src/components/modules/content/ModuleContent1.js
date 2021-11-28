@@ -12,11 +12,6 @@ const ModuleContent1 = () => {
         <Wrap>
 
             <Card style={{ width: '100%' }}>
-                <Card.Header>
-                    <HeadingWrap>
-                        {"Introduction"}
-                    </HeadingWrap>
-                </Card.Header>
                 <Card.Body>
                     <Card.Text>
                         <ParagraphWrap width="100%">
@@ -83,11 +78,6 @@ const ModuleContent1 = () => {
 */
 const Wrap = styled.div`
     padding: 0px;
-`;
-
-const HeadingWrap = styled.h2`
-    margin-left: auto;
-    margin-right: auto;
 `;
 
 const ParagraphWrap = styled.span`

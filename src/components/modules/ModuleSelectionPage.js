@@ -4,7 +4,8 @@ import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import { ModuleContent1 } from './content/ModuleContent1';
 import { ModuleContent2 } from './content/ModuleContent2';
-import { Card } from 'react-bootstrap';
+import { ModuleQuizPage } from './quizzes/ModuleQuizPage';
+import { Card, Modal } from 'react-bootstrap';
 import { BsFillLockFill } from "react-icons/bs";
 import { BsUnlockFill } from "react-icons/bs";
 
@@ -14,15 +15,17 @@ const ModuleSelectionPage = () => {
             0 = Module Selection Page
             1 = Module Content Page #1
             2 = Module Content Page #2
+            3 = Module Quiz Page
     */
     const [selection, setSelection] = useState(0);
+    const [show, setShow] = useState(false);
 
     // Headers for corresponding pages based on selection state
     const headers = [
         'Module Selection Page',
-        '',
-        '',
-        'Quiz'
+        'Introduction to NeoCirc',
+        'Benefits of Neonatal Circumcision',
+        'Module Quiz'
     ];
 
     return (
@@ -32,13 +35,7 @@ const ModuleSelectionPage = () => {
                 {headers[selection]}
             </HeadingWrap>
 
-            {/* 
-                If selection == 0, display the module selection buttons
-
-                @Valentin, you would have to edit the components below to style it similar to the Figma prototype.
-                I'd recommend using something like Cards (https://react-bootstrap.netlify.app/components/cards/) to
-                to make the selection pages
-            */}
+            {/* If selection == 0, display the module selection buttons */}
             { selection === 0 && <div>
             <br></br>
 
@@ -94,24 +91,53 @@ const ModuleSelectionPage = () => {
 
             {/* For both module content pages, display a 'Back' button to allow users to navigate back to selection page */}
             { (selection === 1 || selection === 2) && <Button
-                as={Col}
-                variant="outline-primary"
-                onClick={() => setSelection(0)}
-                style={{ marginTop: '20px', height: "40px", width: "50%"}}
-            >
-                Back
-            </Button>
+                    as={Col}
+                    variant="outline-primary"
+                    onClick={() => setSelection(0)}
+                    style={{ marginTop: '20px', height: "40px", width: "50%"}}
+                >
+                    Back
+                </Button>
             }
 
             {(selection === 1 || selection === 2) && <Button
-                as={Col}
-                variant="outline-primary"
-                onClick={() => setSelection(3)}
-                style={{ marginTop: '20px', height: "40px", width: "50%" }}
-            >
-                Take Quiz
-            </Button>
+                    as={Col}
+                    variant="outline-primary"
+                    onClick={() => setSelection(3)}
+                    style={{ marginTop: '20px', height: "40px", width: "50%" }}
+                >
+                    Take Quiz
+                </Button>
             }
+
+            { selection === 3 && <ModuleQuizPage /> }
+            { selection === 3 && <Button
+                    as={Col}
+                    variant="outline-primary"
+                    onClick={() => setShow(true)}
+                    style={{ marginTop: '20px', height: "40px", width: "50%" }}
+                >
+                    Submit Quiz
+                </Button>
+            }
+
+            <Modal show={show} onHide={() => setShow(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Congratulations!!</Modal.Title>
+                </Modal.Header>
+                <Modal.Body >You passed the quiz! You may return to the module selection screen.</Modal.Body>
+                <Modal.Footer>
+                    <Button 
+                        variant="secondary"
+                        onClick={() => {
+                            setSelection(0);
+                            setShow(false);
+                        }}
+                    >
+                        Return
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </Wrap>
     );
 };

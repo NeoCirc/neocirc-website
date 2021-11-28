@@ -17,7 +17,7 @@ const SideBar = () => {
             </SideBarHeaderWrap>
             <SidebarContent>
                 <Menu iconShape="square">
-                    <MenuItem icon={<FaHome />}>Home</MenuItem>
+                    <MenuItem icon={<FaHome />} onClick={() => window.location.reload()}>Home</MenuItem>
                     <MenuItem icon={<FaInfo />}>About Us</MenuItem>
                     <SubMenu title="FAQ" icon={<FaQuestion />}>
                         <MenuItem>General</MenuItem>
