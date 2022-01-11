@@ -60,7 +60,6 @@ const ModuleSelectionPage = () => {
 };
 
 const Wrap = styled.div`
-    padding: 50px;
 `;
 
 const HeadingWrap = styled.h1`

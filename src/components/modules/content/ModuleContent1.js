@@ -94,7 +94,6 @@ const ModuleContent1 = () => {
     easily like this and use it in the code above.
 */
 const Wrap = styled.div`
-    padding: 50px;
 `;
 
 const ParagraphWrap = styled.span`

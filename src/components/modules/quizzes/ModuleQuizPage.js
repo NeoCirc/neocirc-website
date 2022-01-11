@@ -1,9 +1,10 @@
 import { Form, Col, Row, Image, Button } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 const ModuleQuizPage = () => {
     const navigate = useNavigate();
+    const location = useLocation();
     return (
         <Wrap>
             <HeadingWrap>
@@ -59,7 +60,7 @@ const ModuleQuizPage = () => {
             <Button
                 as={Col}
                 variant="outline-primary"
-                onClick={() => navigate('/modules/content/quiz_result')}
+                onClick={() => navigate(location.pathname + '/result')}
                 style={{ marginTop: '20px', height: "40px", width: "50%" }}
             >
                 Submit Quiz
@@ -69,7 +70,6 @@ const ModuleQuizPage = () => {
 };
 
 const Wrap = styled.div`
-    padding: 50px;
 `;
 
 const HeadingWrap = styled.h1`

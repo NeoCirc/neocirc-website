@@ -75,7 +75,6 @@ const ModuleContent2 = () => {
 };
 
 const Wrap = styled.div`
-    padding: 50px;
 `;
 
 const HeadingWrap = styled.h2`
