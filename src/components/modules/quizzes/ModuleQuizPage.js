@@ -4,6 +4,9 @@ import styled from 'styled-components';
 
 const ModuleQuizPage = () => {
     const navigate = useNavigate();
+
+    // useLocation hook will be used to retrieve the current path of the page.
+    // useLocation can also be used to retrieve data from the path.
     const location = useLocation();
     return (
         <Wrap>
@@ -60,7 +63,14 @@ const ModuleQuizPage = () => {
             <Button
                 as={Col}
                 variant="outline-primary"
-                onClick={() => navigate(location.pathname + '/result')}
+                onClick={() => {
+                    /*
+                        Since we have content1 and content2 routes but with the same quiz result page,
+                        we can take the path of the current route (either '/modules/content1/quiz' or '/modules/content2/quiz')
+                        and add on '/result' to get the desirable path.
+                    */
+                    navigate(location.pathname + '/result');
+                }}
                 style={{ marginTop: '20px', height: "40px", width: "50%" }}
             >
                 Submit Quiz

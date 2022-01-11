@@ -72,7 +72,10 @@ const ModuleContent1 = () => {
             <Button
                 as={Col}
                 variant="outline-primary"
-                onClick={() => navigate('/modules')}
+                onClick={() => {
+                    // When the user presses this button, navigate them back to the module selection page
+                    navigate('/modules');
+                }}
                 style={{ marginTop: '20px', height: "40px", width: "50%"}}
             >
                 Back
@@ -80,7 +83,10 @@ const ModuleContent1 = () => {
             <Button
                 as={Col}
                 variant="outline-primary"
-                onClick={() => navigate('/modules/content1/quiz')}
+                onClick={() => {
+                    // When the user presses this button, navigate them to the quiz page
+                    navigate('/modules/content1/quiz');
+                }}
                 style={{ marginTop: '20px', height: "40px", width: "50%" }}
             >
                 Take Quiz

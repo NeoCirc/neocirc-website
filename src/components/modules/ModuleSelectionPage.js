@@ -22,7 +22,7 @@ const ModuleSelectionPage = () => {
                     </Card.Text>
                     <Button variant="primary"
                         onClick={() => {
-                            // If Module #1 button is clicked, set the selection variable to 1
+                            // If Module #1 button is clicked, route to the content1 page
                             navigate('/modules/content1/1');
                         }}
                     >   Explore Module
@@ -39,7 +39,7 @@ const ModuleSelectionPage = () => {
                     </Card.Text>
                     <Button variant="primary"
                         onClick={() => {
-                            // If Module #2 button is clicked, set the selection variable to 2
+                            // If Module #2 button is clicked, route to the content2 page
                             navigate('/modules/content2/1');
                         }}
                     >   Explore Module

@@ -3,6 +3,10 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import { useNavigate } from 'react-router-dom';
 
+/* 
+    For now, very basic quiz results page with minimal information. 
+    Later on, we will ideally pass in the data from the quiz page onto this route and process the result.
+*/
 const ModuleQuizResult = () => {
     const navigate = useNavigate();
     return (
@@ -16,7 +20,10 @@ const ModuleQuizResult = () => {
             <Button
                 as={Col}
                 variant="primary"
-                onClick={() => navigate('/modules')}
+                onClick={() => {
+                    // When this button is pressed, navigate user back to the module selection page
+                    navigate('/modules');
+                }}
             >
                 Back
             </Button>
