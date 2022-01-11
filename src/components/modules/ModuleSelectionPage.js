@@ -23,7 +23,7 @@ const ModuleSelectionPage = () => {
                     <Button variant="primary"
                         onClick={() => {
                             // If Module #1 button is clicked, route to the content1 page
-                            navigate('/modules/content1/1');
+                            navigate('/modules/content1');
                         }}
                     >   Explore Module
                     </Button>
@@ -40,7 +40,7 @@ const ModuleSelectionPage = () => {
                     <Button variant="primary"
                         onClick={() => {
                             // If Module #2 button is clicked, route to the content2 page
-                            navigate('/modules/content2/1');
+                            navigate('/modules/content2');
                         }}
                     >   Explore Module
                     </Button>

@@ -22,12 +22,12 @@ const App = () => {
           <Route path="/modules" element={<ModuleSelectionPage />} />
 
           {/* Content 1 routes */}
-          <Route path="/modules/content1/1" element={<ModuleContent1 />} />
+          <Route path="/modules/content1" element={<ModuleContent1 />} />
           <Route path="/modules/content1/quiz" element={<ModuleQuizPage />} />
           <Route path="/modules/content1/quiz/result" element={<ModuleQuizResult />} />
 
           {/* Content 2 routes */}
-          <Route path="/modules/content2/1" element={<ModuleContent2 />} />
+          <Route path="/modules/content2" element={<ModuleContent2 />} />
           <Route path="/modules/content2/quiz" element={<ModuleQuizPage />} />
           <Route path="/modules/content2/quiz/result" element={<ModuleQuizResult />} />
         </Routes>
