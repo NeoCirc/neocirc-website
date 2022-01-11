@@ -1,16 +1,17 @@
 import styled from 'styled-components';
 import Card from 'react-bootstrap/Card';
 import Figure from 'react-bootstrap/Figure';
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import { useNavigate } from 'react-router-dom';
 
 const ModuleContent1 = () => {
-    /*
-        @Kevin, you'll want to modify the code below to add some lorem ipsum or just general random text
-        I'd recommend looking through all the options that react bootstrap provides to see if you can
-        make something interesting.
-    */
+    const navigate = useNavigate();
     return (
         <Wrap>
-
+            <Heading>
+                Introduction to NeoCirc
+            </Heading>
             <Card style={{ width: '100%' }}>
                 <Card.Body>
                     <Card.Text>
@@ -68,6 +69,28 @@ const ModuleContent1 = () => {
                     </Card.Text>
                 </Card.Body>
             </Card>
+            <Button
+                as={Col}
+                variant="outline-primary"
+                onClick={() => {
+                    // When the user presses this button, navigate them back to the module selection page
+                    navigate('/modules');
+                }}
+                style={{ marginTop: '20px', height: "40px", width: "50%"}}
+            >
+                Back
+            </Button>
+            <Button
+                as={Col}
+                variant="outline-primary"
+                onClick={() => {
+                    // When the user presses this button, navigate them to the quiz page
+                    navigate('/modules/content1/quiz');
+                }}
+                style={{ marginTop: '20px', height: "40px", width: "50%" }}
+            >
+                Take Quiz
+            </Button>
         </Wrap>
     )
 };
@@ -77,7 +100,6 @@ const ModuleContent1 = () => {
     easily like this and use it in the code above.
 */
 const Wrap = styled.div`
-    padding: 0px;
 `;
 
 const ParagraphWrap = styled.span`
@@ -101,6 +123,10 @@ const HorizontalWrap = styled.div`
 
 const FigureCaptionWrap = styled.span`
     font-size: 20px;
+`;
+
+const Heading = styled.h1`
+    padding-bottom: 10px;
 `;
 
 export { ModuleContent1 };

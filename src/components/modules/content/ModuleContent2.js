@@ -1,14 +1,17 @@
 import styled from 'styled-components';
 import Card from 'react-bootstrap/Card';
 import Figure from 'react-bootstrap/Figure';
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import { useNavigate } from 'react-router-dom';
 
 const ModuleContent2 = () => {
-    /*
-        @Kevin, take a look at my comments on ModuleContent1.js, same thing here
-    */
+    const navigate = useNavigate();
     return (
         <Wrap>
-
+            <Heading>
+                Benefits of Neonatal Circumcision
+            </Heading>
             <Card style={{ width: '100%' }}>
                 <Card.Header>
                     <HeadingWrap>
@@ -51,15 +54,33 @@ const ModuleContent2 = () => {
                     </Card.Text>
                 </Card.Body>
             </Card>
-
+            <Button
+                as={Col}
+                variant="outline-primary"
+                onClick={() => {
+                    // When the user presses this button, navigate them back to the module selection page
+                    navigate('/modules');
+                }}
+                style={{ marginTop: '20px', height: "40px", width: "50%"}}
+            >
+                Back
+            </Button>
+            <Button
+                as={Col}
+                variant="outline-primary"
+                onClick={() => {
+                    // When the user presses this button, navigate them to the quiz page
+                    navigate('/modules/content1/quiz');
+                }}
+                style={{ marginTop: '20px', height: "40px", width: "50%" }}
+            >
+                Take Quiz
+            </Button>
         </Wrap>
-
-        
     )
 };
 
 const Wrap = styled.div`
-    padding: 0px;
 `;
 
 const HeadingWrap = styled.h2`
@@ -76,8 +97,11 @@ const ParagraphWrap = styled.span`
 `;
 
 const ImageWrap = styled.div`
-    width: ${props => props.width};
-    
+    width: ${props => props.width};  
+`;
+
+const Heading = styled.h1`
+    padding-bottom: 10px;
 `;
 
 export { ModuleContent2 };

@@ -2,9 +2,11 @@ import { ProSidebar, Menu, MenuItem, SubMenu, SidebarHeader, SidebarFooter, Side
 import { FaBars, FaQuestion, FaFolder, FaHome, FaInfo } from 'react-icons/fa'
 import styled from 'styled-components';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SideBar = () => {
     const [collapsed, setCollapsed] = useState(true);
+    const navigate = useNavigate();
     return (
         <SideBarWrap
             collapsed={collapsed}
@@ -17,7 +19,7 @@ const SideBar = () => {
             </SideBarHeaderWrap>
             <SidebarContent>
                 <Menu iconShape="square">
-                    <MenuItem icon={<FaHome />} onClick={() => window.location.reload()}>Home</MenuItem>
+                    <MenuItem icon={<FaHome />} onClick={() => navigate('/')}>Home</MenuItem>
                     <MenuItem icon={<FaInfo />}>About Us</MenuItem>
                     <SubMenu title="FAQ" icon={<FaQuestion />}>
                         <MenuItem>General</MenuItem>
