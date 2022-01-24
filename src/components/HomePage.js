@@ -2,47 +2,40 @@ import styled from 'styled-components';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import { useNavigate } from 'react-router-dom';
-import { CardGroup, Card, Badge} from 'react-bootstrap';
-
-import {Row} from 'react-bootstrap';
+import { CardGroup, Card} from 'react-bootstrap';
 
 
 
 import "./style.css";
 
-// For now, very basic home page with a button that leads to the module selection page
 const HomePage = () => {
     // useNavigate hook will be used to programmatically route the user based on their actions
     const navigate = useNavigate();
     return (
         
         <Wrap>     
-            <div>
-                <h1>
-                <strong><center>NeoCirc</center></strong>
-                </h1>
-                <i><center><h6>An educational platform leveraging e-learning to promote proficiency in medical procedures.</h6></center></i>
-                <br></br>
-            </div>
-            {/* <Button
-                as={Col}
-                variant="primary"
-                onClick={() => {
-                    // When this button is clicked, route the user to the module selection page
-                    navigate('/modules');
-                }}
-            >
-                Module Selection Page
-            </Button> */}
+            <Heading>
+               <strong>&nbsp;&nbsp;&nbsp;&nbsp;NeoCirc</strong>
+            </Heading>
+            <SubHeading2 width="95%">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i>An educational platform leveraging e-learning to promote proficiency in medical procedures.</i>
+            </SubHeading2>
+            <div style={{
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '105px'
+            }}>
             <CardGroup>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Card>
                 <Card.Body>
                 <center><Card.Title>The NeoCirc Experience</Card.Title></center>
                 <Card.Text>
-                    We strive to offer the most intimate and personalized experience possible, to do so we need to know more about you.
                     <br></br>
+                    <center>We strive to offer the most intimate and personalized experience possible, to do so we need to know more about you.</center>
                     <br></br>
-                    <center>Which best describes you?</center>
+                    <center><i>Which best describes you?</i></center>
                     <br></br>
                     <center>
                     <Button as={Col}
@@ -53,7 +46,7 @@ const HomePage = () => {
                     }}
                     >I am a Parent</Button>{' '}
                     <Button as={Col}
-                    variant="danger"
+                    variant="dark"
                     onClick={() => {
                         // When this button is clicked, route the user to the module selection page
                         navigate('/modules');
@@ -66,6 +59,8 @@ const HomePage = () => {
                 
             </Card>
             </CardGroup>
+            </div>
+            
     
             
         </Wrap>
@@ -73,12 +68,24 @@ const HomePage = () => {
 };
 
 const Wrap = styled.div`
-
+    
 `;
 
-const HeadingWrap = styled.h1`
-    padding-bottom: 10px;
+const Heading = styled.h1`
+    font-weight: strong;
+    padding-top: 0.5em;
+    font-size:60px;
+    text-align: center;
 `;
 
+const SubHeading2 = styled.h3`
+    width: ${props => props.width};
+    margin: .2em 2.5%;
+    font-weight: light;
+    padding-top: .5em;
+    padding-bottom: 0em;
+    font-size: 21px;
+    text-align: center;
+`;
 
 export { HomePage };
