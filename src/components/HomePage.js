@@ -3,9 +3,6 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import { useNavigate } from 'react-router-dom';
 import { CardGroup, Card} from 'react-bootstrap';
-
-
-
 import "./style.css";
 
 const HomePage = () => {
@@ -15,10 +12,9 @@ const HomePage = () => {
         
         <Wrap>     
             <Heading>
-               <strong>&nbsp;&nbsp;&nbsp;&nbsp;NeoCirc</strong>
+               <strong>NeoCirc</strong>
             </Heading>
-            <SubHeading2 width="95%">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <SubHeading2 width="95%">       
             <i>An educational platform leveraging e-learning to promote proficiency in medical procedures.</i>
             </SubHeading2>
             <div style={{
@@ -27,7 +23,6 @@ const HomePage = () => {
                 padding: '105px'
             }}>
             <CardGroup>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Card>
                 <Card.Body>
                 <center><Card.Title>The NeoCirc Experience</Card.Title></center>
@@ -59,21 +54,19 @@ const HomePage = () => {
                 
             </Card>
             </CardGroup>
-            </div>
-            
-    
-            
+            </div>    
         </Wrap>
     );
 };
 
 const Wrap = styled.div`
+    padding-left: 75px;
     
 `;
 
 const Heading = styled.h1`
     font-weight: strong;
-    padding-top: 0.5em;
+    padding-top: 0.3em;
     font-size:60px;
     text-align: center;
 `;
