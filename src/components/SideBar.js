@@ -20,7 +20,7 @@ const SideBar = () => {
             <SidebarContent>
                 <Menu iconShape="square">
                     <MenuItem icon={<FaHome />} onClick={() => navigate('/')}>Home</MenuItem>
-                    <MenuItem icon={<FaInfo />}>About Us</MenuItem>
+                    <MenuItem icon={<FaInfo />} onClick={() => navigate('/about-us')}>About Us</MenuItem>
                     <SubMenu title="FAQ" icon={<FaQuestion />}>
                         <MenuItem>General</MenuItem>
                         <MenuItem>Doctors</MenuItem>

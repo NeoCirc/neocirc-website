@@ -1,5 +1,6 @@
 import { SideBar } from './components/SideBar';
 import { HomePage } from './components/HomePage';
+import { AboutUsPage } from './components/AboutUsPage';
 import { ModuleSelectionPage } from './components/modules/ModuleSelectionPage';
 import { ModuleContent1 } from './components/modules/content/ModuleContent1';
 import { ModuleContent2 } from './components/modules/content/ModuleContent2';
@@ -20,6 +21,7 @@ const App = () => {
           {/* General Pages */}
           <Route path="/" element={<HomePage />} />
           <Route path="/modules" element={<ModuleSelectionPage />} />
+          <Route path="/about-us" element={<AboutUsPage />} />
 
           {/* Content 1 routes */}
           <Route path="/modules/content1" element={<ModuleContent1 />} />
