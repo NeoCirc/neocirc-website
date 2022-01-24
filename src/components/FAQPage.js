@@ -8,7 +8,6 @@ const FAQPage = () => {
 
     const navigate = useNavigate();
     return (
-        
     );
 };
 
