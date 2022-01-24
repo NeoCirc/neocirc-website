@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Card from 'react-bootstrap/Card';
 import { useNavigate } from 'react-router-dom';
+import samplePortrait from './component-images/sample-portrait.png';
 
 
 const AboutUsPage = () => {
@@ -11,7 +12,7 @@ const AboutUsPage = () => {
                 We are <strong>NeoCirc</strong>
             </Heading>
 
-            <ParagraphWrap width="84%">
+            <ParagraphWrap width="84%" margin="0% 8%">
                 Around 5% of boys who are circumcised as newborns experience complications requiring surgical repair.
                 Such repairs cause parents unexpected financial and emotional burdens and drain healthcare resources.
                 Our goal is to reduce the complications of neonatal circumcision and the number of neonatal circumcisions requiring repair.
@@ -27,8 +28,16 @@ const AboutUsPage = () => {
 
             <PortraitWrap>
 
+                <SubHeading2 width="95%">
+                    NeoCirc inc.
+                </SubHeading2>
+
+                <ParagraphWrap width="100%" margin="0% 2.5% 1.5em">
+                    Description
+                </ParagraphWrap>
+
                 <Card style={{ width: '20%', margin: '2.5%', display: 'inline-block' }}>
-                    <Card.Img variant="top" src="https://cdn-icons-png.flaticon.com/512/880/880974.png" />
+                    <Card.Img variant="top" src={samplePortrait} />
                     <Card.Body>
                         <Card.Title>Emily Blum</Card.Title>
                         <Card.Text>
@@ -39,9 +48,9 @@ const AboutUsPage = () => {
                 </Card>
 
                 <Card style={{ width: '20%', margin: '2.5%', display: 'inline-block' }}>
-                    <Card.Img variant="top" src="https://cdn-icons-png.flaticon.com/512/880/880974.png" />
+                    <Card.Img variant="top" src={samplePortrait} />
                     <Card.Body>
-                        <Card.Title>Masaki Asanuma</Card.Title>
+                        <Card.Title>Emily Blum</Card.Title>
                         <Card.Text>
                             Some quick example text to build on the card title and make up the bulk of
                             the card's content.
@@ -50,7 +59,26 @@ const AboutUsPage = () => {
                 </Card>
 
                 <Card style={{ width: '20%', margin: '2.5%', display: 'inline-block' }}>
-                    <Card.Img variant="top" src="https://cdn-icons-png.flaticon.com/512/880/880974.png" />
+                    <Card.Img variant="top" src={samplePortrait} />
+                    <Card.Body>
+                        <Card.Title>Emily Blum</Card.Title>
+                        <Card.Text>
+                            Some quick example text to build on the card title and make up the bulk of
+                            the card's content.
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+
+                <SubHeading2 width="95%">
+                    Development Team
+                </SubHeading2>
+
+                <ParagraphWrap width="100%" margin="0% 2.5% 1.5em">
+                    Description
+                </ParagraphWrap>
+
+                <Card style={{ width: '20%', margin: '2.5%', display: 'inline-block' }}>
+                    <Card.Img variant="top" src={samplePortrait} />
                     <Card.Body>
                         <Card.Title>Valentin Stelea</Card.Title>
                         <Card.Text>
@@ -61,18 +89,7 @@ const AboutUsPage = () => {
                 </Card>
 
                 <Card style={{ width: '20%', margin: '2.5%', display: 'inline-block' }}>
-                    <Card.Img variant="top" src="https://cdn-icons-png.flaticon.com/512/880/880974.png" />
-                    <Card.Body>
-                        <Card.Title>Kevin Quayle</Card.Title>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-
-                <Card style={{ width: '20%', margin: '2.5%', display: 'inline-block' }}>
-                    <Card.Img variant="top" src="https://cdn-icons-png.flaticon.com/512/880/880974.png" />
+                    <Card.Img variant="top" src={samplePortrait} />
                     <Card.Body>
                         <Card.Title>Sebastian Wilson</Card.Title>
                         <Card.Text>
@@ -83,7 +100,7 @@ const AboutUsPage = () => {
                 </Card>
 
                 <Card style={{ width: '20%', margin: '2.5%', display: 'inline-block' }}>
-                    <Card.Img variant="top" src="https://cdn-icons-png.flaticon.com/512/880/880974.png" />
+                    <Card.Img variant="top" src={samplePortrait} />
                     <Card.Body>
                         <Card.Title>Khelan Modi</Card.Title>
                         <Card.Text>
@@ -94,9 +111,9 @@ const AboutUsPage = () => {
                 </Card>
 
                 <Card style={{ width: '20%', margin: '2.5%', display: 'inline-block' }}>
-                    <Card.Img variant="top" src="https://cdn-icons-png.flaticon.com/512/880/880974.png" />
+                    <Card.Img variant="top" src={samplePortrait} />
                     <Card.Body>
-                        <Card.Title>Emily Blum</Card.Title>
+                        <Card.Title>Masaki Asanuma</Card.Title>
                         <Card.Text>
                             Some quick example text to build on the card title and make up the bulk of
                             the card's content.
@@ -105,9 +122,9 @@ const AboutUsPage = () => {
                 </Card>
 
                 <Card style={{ width: '20%', margin: '2.5%', display: 'inline-block' }}>
-                    <Card.Img variant="top" src="https://cdn-icons-png.flaticon.com/512/880/880974.png" />
+                    <Card.Img variant="top" src={samplePortrait} />
                     <Card.Body>
-                        <Card.Title>Emily Blum</Card.Title>
+                        <Card.Title>Kevin Quayle</Card.Title>
                         <Card.Text>
                             Some quick example text to build on the card title and make up the bulk of
                             the card's content.
@@ -130,7 +147,7 @@ const Wrap = styled.div`
 const ParagraphWrap = styled.span`
     width: ${props => props.width};
     vertical-align: top;
-    margin: 0% 8%;
+    margin: ${props => props.margin};
     font-size: 25px;
     display: inline-block;
     text-align: justify;
@@ -154,6 +171,16 @@ const SubHeading = styled.h2`
     padding-bottom: 1em;
     font-size: 60px;
     text-align: center;
+`;
+
+const SubHeading2 = styled.h3`
+    width: ${props => props.width};
+    margin: .2em 2.5%;
+    font-weight: bolder;
+    padding-top: .5em;
+    padding-bottom: 0em;
+    font-size: 40px;
+    text-align: left;
 `;
 
 export { AboutUsPage };
