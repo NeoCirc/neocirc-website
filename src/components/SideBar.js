@@ -21,10 +21,10 @@ const SideBar = () => {
                 <Menu iconShape="square">
                     <MenuItem icon={<FaHome />} onClick={() => navigate('/')}>Home</MenuItem>
                     <MenuItem icon={<FaInfo />}>About Us</MenuItem>
-                    <SubMenu title="FAQ" icon={<FaQuestion />}>
-                        <MenuItem>General</MenuItem>
-                        <MenuItem>Doctors</MenuItem>
-                        <MenuItem>Parents</MenuItem>
+                    <SubMenu title="FAQ" icon={<FaQuestion />} >
+                        <MenuItem onClick={() => navigate('/GenFAQPage')}>General</MenuItem>
+                        <MenuItem onClick={() => navigate('/DocFAQPage')}>Doctors</MenuItem>
+                        <MenuItem onClick={() => navigate('/ParFAQPage')}>Parents</MenuItem>
                     </SubMenu>
                     <MenuItem icon={<FaFolder />}>Source</MenuItem>
                 </Menu>
