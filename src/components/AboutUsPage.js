@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 import Card from 'react-bootstrap/Card';
-import { useNavigate } from 'react-router-dom';
 import samplePortrait from './component-images/sample-portrait.png';
 
 
 const AboutUsPage = () => {
-    const navigate = useNavigate();
     return (
         <Wrap>
             <Heading>
@@ -141,7 +139,7 @@ const AboutUsPage = () => {
 
 const Wrap = styled.div`
     background: linear-gradient(to bottom, #99ccff 0%, #ffccff 100%);
-
+    margin: 0px 50px 50px 50px;
 `;
 
 const ParagraphWrap = styled.span`
