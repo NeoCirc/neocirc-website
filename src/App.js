@@ -23,9 +23,9 @@ const App = () => {
         <Routes>
           {/* General Pages */}
           <Route path="/" element={<HomePage />} />
-                  <Route path="/GenFAQPage" element={<GenFAQPage />} />
-                  <Route path="/DocFAQPage" element={<DocFAQPage />} />
-                  <Route path="/ParFAQPage" element={<ParFAQPage />} />
+          <Route path="/GenFAQPage" element={<GenFAQPage />} />
+          <Route path="/DocFAQPage" element={<DocFAQPage />} />
+          <Route path="/ParFAQPage" element={<ParFAQPage />} />
           <Route path="/modules" element={<ModuleSelectionPage />} />
 
           {/* Content 1 routes */}

@@ -1,3 +1,4 @@
+// for future use to group faq data together for different user
 export const data = [
     {
         title: "Nunc maximus, magna at ultricies elementum",
