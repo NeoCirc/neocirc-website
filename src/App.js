@@ -46,7 +46,7 @@ const Wrap = styled.div`
 `;
 
 const ContentWrap = styled.div`
-  padding-top: 50px
+  padding-top: 50px;
 `;
 
 const SideBarWrap = styled.div`
