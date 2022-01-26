@@ -27,6 +27,7 @@ const App = () => {
           <Route path="/DocFAQPage" element={<DocFAQPage />} />
           <Route path="/ParFAQPage" element={<ParFAQPage />} />
           <Route path="/modules" element={<ModuleSelectionPage />} />
+          <Route path="/about" element={<AboutUsPage />} />
 
           {/* Content 1 routes */}
           <Route path="/modules/content1" element={<ModuleContent1 />} />
