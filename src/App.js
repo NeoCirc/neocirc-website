@@ -5,29 +5,40 @@ import { DocFAQPage } from './components/DocFAQPage';
 import { ParFAQPage } from './components/ParFAQPage';
 // import { data } from './components/data'; for future use to group faq data together for different user
 import { ModuleSelectionPage } from './components/modules/ModuleSelectionPage';
+import { AboutUsPage } from './components/AboutUsPage';
 import { ModuleContent1 } from './components/modules/content/ModuleContent1';
 import { ModuleContent2 } from './components/modules/content/ModuleContent2';
 import { ModuleQuizPage } from './components/modules/quizzes/ModuleQuizPage';
 import { ModuleQuizResult } from './components/modules/quizzes/ModuleQuizResult';
+import { LoginPage } from './components/LoginPage';
 import { Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 const App = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const navigate = useNavigate();
   return (
     <Wrap>
-      <SideBarWrap>
-        <SideBar />
-      </SideBarWrap>
+      {{ isAuthenticated } &&
+        <SideBarWrap>
+            <SideBar />
+        </SideBarWrap>}
       <ContentWrap>
         {/* Routes for NeoCirc educational platform */}
         <Routes>
           {/* General Pages */}
-          <Route path="/" element={<HomePage />} />
+          <Route path="/Home" element={<HomePage />} />
           <Route path="/GenFAQPage" element={<GenFAQPage />} />
           <Route path="/DocFAQPage" element={<DocFAQPage />} />
           <Route path="/ParFAQPage" element={<ParFAQPage />} />
           <Route path="/modules" element={<ModuleSelectionPage />} />
-          <Route path="/about" element={<AboutUsPage />} />
+                  <Route path="/about" element={<AboutUsPage />} />
+                  <Route path="/" element={<LoginPage onSuccessfulSubmit={(e) => {
+                      setIsAuthenticated(true);
+                  }} />} />
 
           {/* Content 1 routes */}
           <Route path="/modules/content1" element={<ModuleContent1 />} />
