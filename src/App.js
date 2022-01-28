@@ -14,57 +14,82 @@ import { LoginPage } from './components/LoginPage';
 import { Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-
-
 const App = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
-  return (
-      <Wrap>
-      { isAuthenticated  &&
-        <SideBarWrap>
-            <SideBar />
-        </SideBarWrap>}
-      <ContentWrap>
+const [isAuthenticated, setIsAuthenticated] = useState(false)
+return (
+<Wrap>
+  { isAuthenticated  ?
+    <div>
+    <SideBarWrap>
+        <SideBar />
+    </SideBarWrap>
+    <ContentWrap>
         {/* Routes for NeoCirc educational platform */}
         <Routes>
-          {/* General Pages */}
-          <Route path="/Home" element={<HomePage />} />
-          <Route path="/GenFAQPage" element={<GenFAQPage />} />
-          <Route path="/DocFAQPage" element={<DocFAQPage />} />
-          <Route path="/ParFAQPage" element={<ParFAQPage />} />
-          <Route path="/modules" element={<ModuleSelectionPage />} />
-          <Route path="/about" element={<AboutUsPage />} />
-          <Route path="/" element={<LoginPage onSuccessfulSubmit={(e) => {
-            setIsAuthenticated(true);
-          }} />} />
-
-          {/* Content 1 routes */}
-          <Route path="/modules/content1" element={<ModuleContent1 />} />
-          <Route path="/modules/content1/quiz" element={<ModuleQuizPage />} />
-          <Route path="/modules/content1/quiz/result" element={<ModuleQuizResult />} />
-
-          {/* Content 2 routes */}
-          <Route path="/modules/content2" element={<ModuleContent2 />} />
-          <Route path="/modules/content2/quiz" element={<ModuleQuizPage />} />
-          <Route path="/modules/content2/quiz/result" element={<ModuleQuizResult />} />
+        {/* General Pages */}
+        <Route path="/Home" element={
+        <HomePage />
+        } />
+        <Route path="/GenFAQPage" element={
+        <GenFAQPage />
+        } />
+        <Route path="/DocFAQPage" element={
+        <DocFAQPage />
+        } />
+        <Route path="/ParFAQPage" element={
+        <ParFAQPage />
+        } />
+        <Route path="/modules" element={
+        <ModuleSelectionPage />
+        } />
+        <Route path="/about" element={
+        <AboutUsPage />
+        } />
+        {/* Content 1 routes */}
+        <Route path="/modules/content1" element={
+        <ModuleContent1 />
+        } />
+        <Route path="/modules/content1/quiz" element={
+        <ModuleQuizPage />
+        } />
+        <Route path="/modules/content1/quiz/result" element={
+        <ModuleQuizResult />
+        } />
+        {/* Content 2 routes */}
+        <Route path="/modules/content2" element={
+        <ModuleContent2 />
+        } />
+        <Route path="/modules/content2/quiz" element={
+        <ModuleQuizPage />
+        } />
+        <Route path="/modules/content2/quiz/result" element={
+        <ModuleQuizResult />
+        } />
         </Routes>
-      </ContentWrap>
-    </Wrap>
-  );
+    </ContentWrap>
+    </div>:
+    <ContentWrap>
+        <Routes>
+            <Route path="/" element={
+                <LoginPage onSuccessfulSubmit={(e) => {
+                    setIsAuthenticated(true);
+                }
+                } />
+            } />
+        </Routes>
+    </ContentWrap>
+  }
+</Wrap>
+);
 }
-
 const Wrap = styled.div`
-  display: flex;
-  flex-direction: row;
+display: flex;
+flex-direction: row;
 `;
-
 const ContentWrap = styled.div`
-  padding: 50px;
+padding: 50px;
 `;
-
 const SideBarWrap = styled.div`
-  padding-right: 75px;
+padding-right: 75px;
 `;
-
 export { App };
