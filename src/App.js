@@ -19,10 +19,9 @@ import { useNavigate } from 'react-router-dom';
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
-  const navigate = useNavigate();
   return (
-    <Wrap>
-      {{ isAuthenticated } &&
+      <Wrap>
+      { isAuthenticated  &&
         <SideBarWrap>
             <SideBar />
         </SideBarWrap>}
@@ -35,10 +34,10 @@ const App = () => {
           <Route path="/DocFAQPage" element={<DocFAQPage />} />
           <Route path="/ParFAQPage" element={<ParFAQPage />} />
           <Route path="/modules" element={<ModuleSelectionPage />} />
-                  <Route path="/about" element={<AboutUsPage />} />
-                  <Route path="/" element={<LoginPage onSuccessfulSubmit={(e) => {
-                      setIsAuthenticated(true);
-                  }} />} />
+          <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/" element={<LoginPage onSuccessfulSubmit={(e) => {
+            setIsAuthenticated(true);
+          }} />} />
 
           {/* Content 1 routes */}
           <Route path="/modules/content1" element={<ModuleContent1 />} />
