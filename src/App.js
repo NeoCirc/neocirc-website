@@ -1,5 +1,9 @@
 import { SideBar } from './components/SideBar';
 import { HomePage } from './components/HomePage';
+import { GenFAQPage } from './components/GenFAQPage';
+import { DocFAQPage } from './components/DocFAQPage';
+import { ParFAQPage } from './components/ParFAQPage';
+// import { data } from './components/data'; for future use to group faq data together for different user
 import { AboutUsPage } from './components/AboutUsPage';
 import { ContactPage } from './components/ContactPage';
 import { ModuleSelectionPage } from './components/modules/ModuleSelectionPage';
@@ -21,6 +25,9 @@ const App = () => {
         <Routes>
           {/* General Pages */}
           <Route path="/" element={<HomePage />} />
+          <Route path="/GenFAQPage" element={<GenFAQPage />} />
+          <Route path="/DocFAQPage" element={<DocFAQPage />} />
+          <Route path="/ParFAQPage" element={<ParFAQPage />} />
           <Route path="/modules" element={<ModuleSelectionPage />} />
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/contact" element={<ContactPage />} />
