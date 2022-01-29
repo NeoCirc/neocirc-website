@@ -4,6 +4,8 @@ import { GenFAQPage } from './components/GenFAQPage';
 import { DocFAQPage } from './components/DocFAQPage';
 import { ParFAQPage } from './components/ParFAQPage';
 // import { data } from './components/data'; for future use to group faq data together for different user
+import { AboutUsPage } from './components/AboutUsPage';
+import { ContactPage } from './components/ContactPage';
 import { ModuleSelectionPage } from './components/modules/ModuleSelectionPage';
 import { ModuleContent1 } from './components/modules/content/ModuleContent1';
 import { ModuleContent2 } from './components/modules/content/ModuleContent2';
@@ -28,6 +30,7 @@ const App = () => {
           <Route path="/ParFAQPage" element={<ParFAQPage />} />
           <Route path="/modules" element={<ModuleSelectionPage />} />
           <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
 
           {/* Content 1 routes */}
           <Route path="/modules/content1" element={<ModuleContent1 />} />
@@ -50,11 +53,11 @@ const Wrap = styled.div`
 `;
 
 const ContentWrap = styled.div`
-  padding: 50px;
+  padding-top: 50px;
 `;
 
 const SideBarWrap = styled.div`
-  padding-right: 75px;
+  padding-right: 80px;
 `;
 
 export { App };

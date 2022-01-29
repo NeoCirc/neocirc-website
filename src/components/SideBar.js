@@ -1,5 +1,5 @@
 import { ProSidebar, Menu, MenuItem, SubMenu, SidebarHeader, SidebarFooter, SidebarContent } from 'react-pro-sidebar';
-import { FaBars, FaQuestion, FaFolder, FaHome, FaInfo } from 'react-icons/fa'
+import { FaBars, FaQuestion, FaFolder, FaHome, FaInfo, FaMailBulk } from 'react-icons/fa';
 import styled from 'styled-components';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -27,6 +27,7 @@ const SideBar = () => {
                         <MenuItem onClick={() => navigate('/ParFAQPage')}>Parents</MenuItem>
                     </SubMenu>
                     <MenuItem icon={<FaFolder />}>Source</MenuItem>
+                    <MenuItem icon={<FaMailBulk />} onClick={() => navigate('/contact')}>Contact Us!</MenuItem>
                 </Menu>
             </SidebarContent>
             {collapsed ? null : <SidebarFooter>

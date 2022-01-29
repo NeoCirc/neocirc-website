@@ -62,7 +62,7 @@ const ModuleQuizPage = () => {
             </Form>
             <Button
                 as={Col}
-                variant="outline-primary"
+                variant="success"
                 onClick={() => {
                     /*
                         Since we have content1 and content2 routes but with the same quiz result page,
@@ -80,6 +80,7 @@ const ModuleQuizPage = () => {
 };
 
 const Wrap = styled.div`
+    margin: 0px 50px 50px 50px;
 `;
 
 const HeadingWrap = styled.h1`

@@ -32,6 +32,7 @@ const ModuleQuizResult = () => {
 };
 
 const Wrap = styled.div`
+    margin: 0px 50px 50px 50px;
 `;
 
 const HeadingWrap = styled.h1`

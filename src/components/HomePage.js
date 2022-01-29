@@ -60,8 +60,11 @@ const HomePage = () => {
 };
 
 const Wrap = styled.div`
-    padding-left: 75px;
-    
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 `;
 
 const Heading = styled.h1`

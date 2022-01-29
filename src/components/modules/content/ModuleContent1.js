@@ -71,7 +71,7 @@ const ModuleContent1 = () => {
             </Card>
             <Button
                 as={Col}
-                variant="outline-primary"
+                variant="dark"
                 onClick={() => {
                     // When the user presses this button, navigate them back to the module selection page
                     navigate('/modules');
@@ -82,7 +82,7 @@ const ModuleContent1 = () => {
             </Button>
             <Button
                 as={Col}
-                variant="outline-primary"
+                variant="info"
                 onClick={() => {
                     // When the user presses this button, navigate them to the quiz page
                     navigate('/modules/content1/quiz');
@@ -100,6 +100,7 @@ const ModuleContent1 = () => {
     easily like this and use it in the code above.
 */
 const Wrap = styled.div`
+    margin: 0px 50px 50px 50px;
 `;
 
 const ParagraphWrap = styled.span`
