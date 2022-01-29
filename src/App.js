@@ -11,6 +11,7 @@ import { ModuleContent2 } from './components/modules/content/ModuleContent2';
 import { ModuleQuizPage } from './components/modules/quizzes/ModuleQuizPage';
 import { ModuleQuizResult } from './components/modules/quizzes/ModuleQuizResult';
 import { LoginPage } from './components/LoginPage';
+import { SourcesPage } from './components/SourcesPage';
 import { Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import { useState } from 'react';
@@ -30,6 +31,9 @@ return (
         <Route path="/Home" element={
         <HomePage />
         } />
+        <Route path="/" element={
+            <HomePage />
+        } />
         <Route path="/GenFAQPage" element={
         <GenFAQPage />
         } />
@@ -44,6 +48,9 @@ return (
         } />
         <Route path="/about" element={
         <AboutUsPage />
+        } />
+        <Route path="/sources" element={
+            <SourcesPage />
         } />
         {/* Content 1 routes */}
         <Route path="/modules/content1" element={
