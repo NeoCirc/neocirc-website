@@ -9,8 +9,10 @@ import { ContactPage } from './components/ContactPage';
 import { ModuleSelectionPage } from './components/modules/ModuleSelectionPage';
 import { ModuleContent1 } from './components/modules/content/ModuleContent1';
 import { ModuleContent2 } from './components/modules/content/ModuleContent2';
-import { ModuleQuizPage } from './components/modules/quizzes/ModuleQuizPage';
-import { ModuleQuizResult } from './components/modules/quizzes/ModuleQuizResult';
+import { ModuleQuizPage } from './components/modules/quizzes/Module1QuizPage';
+import { Module2QuizPage } from './components/modules/quizzes/Module2QuizPage';
+import { Module1QuizResult } from './components/modules/quizzes/Module1QuizResult';
+import { Module2QuizResult } from './components/modules/quizzes/Module2QuizResult';
 import { SourcesPage } from './components/SourcesPage';
 import { Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
@@ -37,12 +39,12 @@ const App = () => {
           {/* Content 1 routes */}
           <Route path="/modules/content1" element={<ModuleContent1 />} />
           <Route path="/modules/content1/quiz" element={<ModuleQuizPage />} />
-          <Route path="/modules/content1/quiz/result" element={<ModuleQuizResult />} />
+          <Route path="/modules/content1/quiz/result" element={<Module1QuizResult />} />
 
           {/* Content 2 routes */}
           <Route path="/modules/content2" element={<ModuleContent2 />} />
-          <Route path="/modules/content2/quiz" element={<ModuleQuizPage />} />
-          <Route path="/modules/content2/quiz/result" element={<ModuleQuizResult />} />
+          <Route path="/modules/content2/quiz" element={<Module2QuizPage />} />
+          <Route path="/modules/content2/quiz/result" element={<Module2QuizResult />} />
         </Routes>
       </ContentWrap>
     </Wrap>

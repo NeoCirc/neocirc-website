@@ -2,7 +2,7 @@ import { Form, Col, Row, Image, Button } from 'react-bootstrap';
 import { useNavigate, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
-const ModuleQuizPage = () => {
+const Module2QuizPage = () => {
     const navigate = useNavigate();
 
     // useLocation hook will be used to retrieve the current path of the page.
@@ -11,7 +11,7 @@ const ModuleQuizPage = () => {
     return (
         <Wrap>
             <HeadingWrap>
-                Module Quiz Page
+                Module 2 Quiz Page
             </HeadingWrap>
             <Form>
                 <fieldset>
@@ -87,4 +87,4 @@ const HeadingWrap = styled.h1`
     padding-bottom: 10px;
 `;
 
-export { ModuleQuizPage };
+export { Module2QuizPage };

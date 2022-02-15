@@ -70,7 +70,7 @@ const ModuleContent2 = () => {
                 variant="info"
                 onClick={() => {
                     // When the user presses this button, navigate them to the quiz page
-                    navigate('/modules/content1/quiz');
+                    navigate('/modules/content2/quiz');
                 }}
                 style={{ marginTop: '20px', height: "40px", width: "50%" }}
             >
