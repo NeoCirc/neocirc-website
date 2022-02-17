@@ -81,10 +81,18 @@ const Wrap = styled.div`
 
 const ContentWrap = styled.div`
   padding-top: 50px;
+  @media (max-width: 768px) {
+    padding-top: 80px;
+    display: flex;
+    margin: auto;
+  }
 `;
 
 const SideBarWrap = styled.div`
   padding-right: 80px;
+  @media (max-width: 768px) {
+    padding-right: 0px;
+  }
 `;
 
 export { App };

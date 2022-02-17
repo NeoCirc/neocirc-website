@@ -1,19 +1,38 @@
 import { ProSidebar, Menu, MenuItem, SubMenu, SidebarHeader, SidebarFooter, SidebarContent } from 'react-pro-sidebar';
 import { FaBars, FaQuestion, FaFolder, FaHome, FaInfo, FaMailBulk } from 'react-icons/fa';
+import { Button } from 'react-bootstrap';
 import styled from 'styled-components';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const SideBar = () => {
     const [collapsed, setCollapsed] = useState(true);
+    const [toggled, setToggled] = useState(false);
     const navigate = useNavigate();
-    return (
+    return (<>
+        {!toggled && <ToggleBurger>
+            <ToggleButton onClick={() => {
+                setToggled(!toggled);
+                setCollapsed(!collapsed);
+            }}>
+                <FaBars />
+            </ToggleButton>
+        </ToggleBurger>}
         <SideBarWrap
             collapsed={collapsed}
+            toggled={toggled}
+            breakPoint="md"
         >
             <SideBarHeaderWrap>
                 { collapsed ? null : <SideBarHeaderText>NeoCirc</SideBarHeaderText> }
-                <Burger onClick={() => setCollapsed(!collapsed)}>
+                <Burger onClick={() => {
+                    if (toggled) {
+                        setCollapsed(!collapsed);
+                        setToggled(!toggled);
+                    } else {
+                        setCollapsed(!collapsed);
+                    }
+                }}>
                     <FaBars />
                 </Burger>
             </SideBarHeaderWrap>
@@ -34,7 +53,7 @@ const SideBar = () => {
                 <FooterWrap>NeoCirc LLC</FooterWrap>
             </SidebarFooter>}
         </SideBarWrap>
-    );
+    </>);
 }
 
 const SideBarWrap = styled(ProSidebar)`
@@ -68,6 +87,22 @@ const Burger = styled.div`
     align-items: center;
     justify-content: center;
     font-size: 15px;
+`;
+
+const ToggleBurger = styled.div`
+    display: none;
+    width: 100vw;
+    left: 0;
+    z-index: 3;
+    position: fixed;
+    background: #0d6efd;
+    @media (max-width: 768px) {
+        display: flex;
+    }
+`;
+
+const ToggleButton = styled(Button)`
+    padding: 15px;
 `;
 
 export { SideBar };
