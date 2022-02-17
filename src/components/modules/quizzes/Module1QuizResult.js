@@ -16,18 +16,15 @@ const Module1QuizResult = () => {
             <HeadingWrap>
                 Quiz 1 Result
             </HeadingWrap>
-            <p>
-                <h5>Score is: </h5>
-            </p>
             <Button
                 as={Col}
                 variant="primary"
                 onClick={() => {
                     // When this button is pressed, navigate user back to the module selection page
-                    navigate('/modules/content1/quiz');
+                    navigate('/modules');
                 }}
             >
-                Back
+                Back to Modules
             </Button>
         </Wrap>
     );
@@ -35,6 +32,9 @@ const Module1QuizResult = () => {
 
 const Wrap = styled.div`
     margin: 0px 50px 50px 50px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px;
 `;
 
 const HeadingWrap = styled.h1`
