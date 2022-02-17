@@ -21,6 +21,8 @@ const ModuleQuizPage = () => {
 
     const correctAnswers = [false, true, true];
 
+    const readyToSubmit = (userAnswers.length === 3) && (!userAnswers.includes(undefined));
+
     const generateQuestions = () => {
         const tfQuestions = [];
         for (let i = 0; i < 3; i++) {
@@ -82,6 +84,7 @@ const ModuleQuizPage = () => {
                 {generateQuestions()}
                 <center>
                     <Button
+                        disabled={false}
                         as={Col}
                         onClick={() => {
                             /*
@@ -100,7 +103,7 @@ const ModuleQuizPage = () => {
                                 }
                             );
                         }}
-                        style={{ marginTop: '-40px' }}
+                        style={readyToSubmit ? {} : {pointerEvents: 'none'}}
                     >
                         Submit Quiz
                     </Button>
