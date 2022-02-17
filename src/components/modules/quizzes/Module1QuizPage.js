@@ -119,6 +119,7 @@ const Wrap = styled.div`
 const HeadingWrap = styled.h1`
     padding-bottom: 10px;
 `;
+
 export {ModuleQuizPage};
 
 
