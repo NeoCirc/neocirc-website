@@ -1,7 +1,6 @@
-import { Form, Col, Row, Button } from 'react-bootstrap';
+import { Col, Button } from 'react-bootstrap';
 import { useNavigate, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import React, { Component } from "react";
 import Card from 'react-bootstrap/Card';
 import { useState } from 'react';
 
@@ -94,7 +93,6 @@ const ModuleQuizPage = () => {
                             navigate(
                                 resultPath,
                                 {
-                                    pathname: resultPath,
                                     state: {
                                         user: userAnswers,
                                         correct: correctAnswers,
