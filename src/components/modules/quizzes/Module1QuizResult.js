@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
-import { useNavigate } from 'react-router-dom';
- 
+import { useNavigate, useLocation } from 'react-router-dom';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import ChangingProgressProvider from '../../../utils/ChangingProgressProvider';
 
 /* 
     For now, very basic quiz results page with minimal information. 
@@ -11,11 +13,33 @@ import { useNavigate } from 'react-router-dom';
 const Module1QuizResult = () => {
     const navigate = useNavigate();
     
+    // Retrieve state data from quiz page
+    const { state } = useLocation();
+    const { user, correct } = state;
+    let scorePercentage = 0;
+    for (let i = 0; i < user.length; i++) {
+        if (user[i] === correct[i]) {
+            scorePercentage++;
+        }
+    }
+    scorePercentage = Math.floor((scorePercentage / user.length) * 100);
+    
     return (
         <Wrap>
             <HeadingWrap>
                 Quiz 1 Result
             </HeadingWrap>
+            <ChangingProgressProvider values={[...Array(scorePercentage + 1).keys()]}>
+                {percentage => (
+                    <CircularProgressbar
+                        value={percentage}
+                        text={`${percentage}%`}
+                        styles={buildStyles({
+                            pathTransitionDuration: 0.15
+                        })}
+                    />
+                )}
+            </ChangingProgressProvider>
             <Button
                 as={Col}
                 variant="primary"
