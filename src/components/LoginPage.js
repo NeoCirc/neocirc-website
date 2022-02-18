@@ -14,7 +14,7 @@ const LoginPage = ({ onSuccessfulSubmit }) => {
   const onSubmit = (e) => {
     e.preventDefault()
 
-    if (userCode != secretCode) {
+    if (userCode !== secretCode) {
       alert("Incorrect code ");
       return;
     }

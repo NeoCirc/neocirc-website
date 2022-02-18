@@ -13,7 +13,7 @@ const ModuleSelectionPage = () => {
                 Module Selection Page
             </HeadingWrap>
             <br></br>
-            <Card style={{ width: '79rem' }}>
+            <Card>
                 <Card.Header><BsUnlockFill color="black" size={20}/>  Module 1</Card.Header>
                 <Card.Body>
                     <Card.Title>Introduction to NeoCirc</Card.Title>
@@ -30,7 +30,7 @@ const ModuleSelectionPage = () => {
                 </Card.Body>
             </Card>
             <br></br>
-            <Card style={{ width: '79rem' }}>
+            <Card>
                 <Card.Header><BsUnlockFill color="black" size={20}/> Module 2</Card.Header>
                 <Card.Body>
                     <Card.Title>Benefits of Neonatal Circumcision</Card.Title>
@@ -47,7 +47,7 @@ const ModuleSelectionPage = () => {
                 </Card.Body>
             </Card>
             <br></br>
-            <Card style={{ width: '79rem' }}>
+            <Card>
                 <Card.Header><BsFillLockFill color="black" size={20}/>  Module 3</Card.Header>
                 <Card.Body>
                     <Card.Text>
