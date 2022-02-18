@@ -13,7 +13,9 @@ const SideBar = () => {
         {!toggled && <ToggleBurger>
             <ToggleButton onClick={() => {
                 setToggled(!toggled);
-                setCollapsed(!collapsed);
+                if (collapsed === true) {
+                    setCollapsed(false);
+                }
             }}>
                 <FaBars />
             </ToggleButton>
@@ -27,7 +29,9 @@ const SideBar = () => {
                 { collapsed ? null : <SideBarHeaderText>NeoCirc</SideBarHeaderText> }
                 <Burger onClick={() => {
                     if (toggled) {
-                        setCollapsed(!collapsed);
+                        if (collapsed === false) {
+                            setCollapsed(true);
+                        }
                         setToggled(!toggled);
                     } else {
                         setCollapsed(!collapsed);
@@ -98,6 +102,9 @@ const ToggleBurger = styled.div`
     background: #0d6efd;
     @media (max-width: 768px) {
         display: flex;
+    }
+    html:not([data-scroll='0']) {
+        background: black;
     }
 `;
 
