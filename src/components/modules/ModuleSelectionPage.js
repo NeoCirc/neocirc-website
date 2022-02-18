@@ -16,14 +16,14 @@ const ModuleSelectionPage = () => {
             <Card>
                 <Card.Header><BsUnlockFill color="black" size={20}/>  Module 1</Card.Header>
                 <Card.Body>
-                    <Card.Title>Introduction to NeoCirc</Card.Title>
+                    <Card.Title>Skin Therapy Techniques</Card.Title>
                     <Card.Text>
-                        Learn the basics regarding our organization and how our modules work. 
+                        You will learn simple skin therapy techniques to prevent common problems of healing after circumcision.
                     </Card.Text>
                     <Button variant="primary"
                         onClick={() => {
                             // If Module #1 button is clicked, route to the content1 page
-                            navigate('/modules/content1');
+                            navigate('/modules/content1/1');
                         }}
                     >   Explore Module
                     </Button>

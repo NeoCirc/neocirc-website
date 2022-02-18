@@ -7,7 +7,14 @@ import { ParFAQPage } from './components/ParFAQPage';
 import { AboutUsPage } from './components/AboutUsPage';
 import { ContactPage } from './components/ContactPage';
 import { ModuleSelectionPage } from './components/modules/ModuleSelectionPage';
-import { ModuleContent1 } from './components/modules/content/ModuleContent1';
+import { ModuleContent1_1 } from './components/modules/content/module_1/ModuleContent1.1';
+import { ModuleContent1_2 } from './components/modules/content/module_1/ModuleContent1.2';
+import { ModuleContent1_3 } from './components/modules/content/module_1/ModuleContent1.3';
+import { ModuleContent1_4 } from './components/modules/content/module_1/ModuleContent1.4';
+import { ModuleContent1_5 } from './components/modules/content/module_1/ModuleContent1.5';
+import { ModuleContent1_6 } from './components/modules/content/module_1/ModuleContent1.6';
+import { ModuleContent1_7 } from './components/modules/content/module_1/ModuleContent1.7';
+
 import { ModuleContent2 } from './components/modules/content/ModuleContent2';
 import { ModuleQuizPage } from './components/modules/quizzes/Module1QuizPage';
 import { Module2QuizPage } from './components/modules/quizzes/Module2QuizPage';
@@ -47,7 +54,14 @@ const App = () => {
               <Route path="/modules" element={<ModuleSelectionPage />} />
 
               {/* Content 1 routes */}
-              <Route path="/modules/content1" element={<ModuleContent1 />} />
+              <Route path="/modules/content1/1" element={<ModuleContent1_1 />} />
+              <Route path="/modules/content1/2" element={<ModuleContent1_2 />} />
+              <Route path="/modules/content1/3" element={<ModuleContent1_3 />} />
+              <Route path="/modules/content1/4" element={<ModuleContent1_4 />} />
+              <Route path="/modules/content1/5" element={<ModuleContent1_5 />} />
+              <Route path="/modules/content1/6" element={<ModuleContent1_6 />} />
+              <Route path="/modules/content1/7" element={<ModuleContent1_7 />} />
+
               <Route path="/modules/content1/quiz" element={<ModuleQuizPage />} />
               <Route path="/modules/content1/quiz/result" element={<Module1QuizResult />} />
 
