@@ -77,7 +77,7 @@ const ModuleQuizPage = () => {
                     <Button
                     as={Col}
                     onClick={() => {
-                        navigate('/modules/content1');
+                        navigate('/modules/content1/1');
                     }}
                     style={{ float: 'right', marginTop: '-45px'}}
                 >
