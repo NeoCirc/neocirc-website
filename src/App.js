@@ -14,10 +14,13 @@ import { Module2QuizPage } from './components/modules/quizzes/Module2QuizPage';
 import { Module1QuizResult } from './components/modules/quizzes/Module1QuizResult';
 import { Module2QuizResult } from './components/modules/quizzes/Module2QuizResult';
 import { SourcesPage } from './components/SourcesPage';
+import { LoginPage } from './components/LoginPage';
 import { Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
 import styled from 'styled-components';
 
 const App = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
   return (
     <Wrap>
       <SideBarWrap>
@@ -31,21 +34,41 @@ const App = () => {
           <Route path="/GenFAQPage" element={<GenFAQPage />} />
           <Route path="/DocFAQPage" element={<DocFAQPage />} />
           <Route path="/ParFAQPage" element={<ParFAQPage />} />
-          <Route path="/modules" element={<ModuleSelectionPage />} />
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/sources" element={<SourcesPage />} />
-
-          {/* Content 1 routes */}
-          <Route path="/modules/content1" element={<ModuleContent1 />} />
-          <Route path="/modules/content1/quiz" element={<ModuleQuizPage />} />
-          <Route path="/modules/content1/quiz/result" element={<Module1QuizResult />} />
-
-          {/* Content 2 routes */}
-          <Route path="/modules/content2" element={<ModuleContent2 />} />
-          <Route path="/modules/content2/quiz" element={<Module2QuizPage />} />
-          <Route path="/modules/content2/quiz/result" element={<Module2QuizResult />} />
         </Routes>
+      {isAuthenticated ?
+        <div>
+          <ContentWrap>
+            {/* Routes for NeoCirc educational platform */}
+            <Routes>
+              { /* Module selection page */}
+              <Route path="/modules" element={<ModuleSelectionPage />} />
+
+              {/* Content 1 routes */}
+              <Route path="/modules/content1" element={<ModuleContent1 />} />
+              <Route path="/modules/content1/quiz" element={<ModuleQuizPage />} />
+              <Route path="/modules/content1/quiz/result" element={<Module1QuizResult />} />
+
+              {/* Content 2 routes */}
+              <Route path="/modules/content2" element={<ModuleContent2 />} />
+              <Route path="/modules/content2/quiz" element={<Module2QuizPage />} />
+              <Route path="/modules/content2/quiz/result" element={<Module2QuizResult />} />
+            </Routes>
+          </ContentWrap>
+        </div> :
+        <ContentWrap>
+          <Routes>
+            <Route path="/modules" element={
+              <LoginPage onSuccessfulSubmit={(e) => {
+                setIsAuthenticated(true);
+              }
+              } />
+            } />
+          </Routes>
+        </ContentWrap>
+      }
       </ContentWrap>
     </Wrap>
   );

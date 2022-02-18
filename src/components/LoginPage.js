@@ -24,23 +24,29 @@ const LoginPage = ({ onSuccessfulSubmit }) => {
             return;
         }
         onSuccessfulSubmit();
-        navigate('/Home');
+        navigate('/modules');
 
     }
 
     return (
-        <form>
-            <h2>Please enter a verification code</h2>
-            <div class="form-group">
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your code here" value={userCode} onChange={e => setUserCode(e.target.value)} />
-            </div>
-            <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1" onChange={e => setAgreed(e.currentTarget.checked)} />
-                <label class="form-check-label" for="exampleCheck1">I agree to the terms and conditions.</label>
-            </div>
-            <button type="submit" class="btn btn-primary" onClick={onSubmit}> Submit </button>
-        </form>
+      <Wrap>
+          <form>
+                <h2>Please enter a verification code</h2>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your code here" value={userCode} onChange={e => setUserCode(e.target.value)} />
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" onChange={e => setAgreed(e.currentTarget.checked)} />
+                    <label class="form-check-label" for="exampleCheck1">I agree to the terms and conditions.</label>
+                </div>
+                <button type="submit" class="btn btn-primary" onClick={onSubmit}> Submit </button>
+            </form>
+        </Wrap>
     );
 }
+const Wrap = styled.div`
+    padding-left: 40px;
+    padding-right: 40px;
+`;
 
 export { LoginPage };
