@@ -2,14 +2,17 @@ import styled from 'styled-components';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import { useNavigate } from 'react-router-dom';
-import { CardGroup, Card} from 'react-bootstrap';
+import { CardGroup, Card } from 'react-bootstrap';
+import { isMobile } from '../mobile.js'
 import "./style.css";
 
 const HomePage = () => {
     // useNavigate hook will be used to programmatically route the user based on their actions
     const navigate = useNavigate();
+    const mob = isMobile();
     return (
-        
+
+        <div className={mob}>
         <Wrap>     
             <Heading>
                <strong>NeoCirc</strong>
@@ -55,7 +58,8 @@ const HomePage = () => {
             </Card>
             </CardGroup>
             </div>    
-        </Wrap>
+            </Wrap>
+            </div>
     );
 };
 

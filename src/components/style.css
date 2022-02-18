@@ -5,6 +5,13 @@ body {
 	height: 100%;
 }
 
+.mobile-style {
+	background-color: black;
+}
+
+.desktop-style {
+}
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
