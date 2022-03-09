@@ -23,7 +23,7 @@ const ModuleSelectionPage = () => {
                     <Button variant="primary"
                         onClick={() => {
                             // If Module #1 button is clicked, route to the content1 page
-                            navigate('/modules/content1/1');
+                            navigate('/modules/skin_therapy/1');
                         }}
                     >   Explore Module
                     </Button>
@@ -31,27 +31,10 @@ const ModuleSelectionPage = () => {
             </Card>
             <br></br>
             <Card>
-                <Card.Header><BsUnlockFill color="black" size={20}/> Module 2</Card.Header>
-                <Card.Body>
-                    <Card.Title>Benefits of Neonatal Circumcision</Card.Title>
-                    <Card.Text>
-                        Circumcision is a rather debated field, however in this module we will illustrate the benefits of this medical procedure.
-                    </Card.Text>
-                    <Button variant="primary"
-                        onClick={() => {
-                            // If Module #2 button is clicked, route to the content2 page
-                            navigate('/modules/content2');
-                        }}
-                    >   Explore Module
-                    </Button>
-                </Card.Body>
-            </Card>
-            <br></br>
-            <Card>
-                <Card.Header><BsFillLockFill color="black" size={20}/>  Module 3</Card.Header>
+                <Card.Header><BsFillLockFill color="black" size={20}/>  Module 2</Card.Header>
                 <Card.Body>
                     <Card.Text>
-                        <center>Complete Module 1 & Module 2 before continuing. </center>
+                        <center>Coming soon! Will be added in the future. </center>
                     </Card.Text>
                 </Card.Body>
             </Card>

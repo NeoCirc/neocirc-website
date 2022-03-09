@@ -2,34 +2,35 @@ import styled from 'styled-components';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import { useNavigate } from 'react-router-dom';
-import ReactPlayer from 'react-player'
-import video from './videos/7.mp4';
+import ReactAudioPlayer from 'react-audio-player'
+import audio from './audio/1.mp3';
 
-const ModuleContent1_7 = () => {
+const SkinTherapy1 = () => {
     const navigate = useNavigate();
     return (
         <Wrap>
             <Heading>
-                Why Skin Therapy?
+                For Families Who Choose Circumcision
             </Heading>
 
-            <VideoWrap width="50%" margin="4% 25%">
-                <ReactPlayer
-                    className='react-player'
-                    url={video}
-                    controls={true}
-                    width='100%'
-                    height='100%'
-                />
-                Keep success by skin therapy.
-            </VideoWrap>
+            <ParagraphWrap width="92%" margin="4% 4%">
+                {"Care of the penile shaft after circumcision is important for proper healing of the circumcision.\n\n" +
+                "Please follow the instructions for cleaning and dressing the circumcision site given to you by your provider. \n\n" +
+                "In this module, you will learn additional care critical to proper healing of the circumcision."}
+            </ParagraphWrap>
+
+            <ReactAudioPlayer
+                src={audio}
+                style={{margin: '2% 4%', width: '92%'}}
+                controls
+            />
 
             <Button
                 as={Col}
                 variant="dark"
                 onClick={() => {
                     // When the user presses this button, navigate them back to the module selection page
-                    navigate('/modules/content1/6');
+                    navigate('/modules');
                 }}
                 style={{ margin: '0% 0% 4% 4%', height: "40px", width: "46%"}}
             >
@@ -39,12 +40,12 @@ const ModuleContent1_7 = () => {
                 as={Col}
                 variant="info"
                 onClick={() => {
-                    // When the user presses this button, navigate them to the quiz page
-                    navigate('/modules/content1/quiz');
+                    // When the user presses this button, navigate them to the next page in module
+                    navigate('/modules/skin_therapy/2');
                 }}
                 style={{ margin: '0% 4% 4% 0%', height: "40px", width: "46%"}}
             >
-                Take Quiz
+                Next
             </Button>
         </Wrap>
     )
@@ -57,25 +58,14 @@ const ModuleContent1_7 = () => {
 const Wrap = styled.div`
     background: linear-gradient(to bottom, #99ccff 0%, #ffccff 100%);
     margin: 0px 50px 50px 50px;
-    width: 180%; //bad solution (not scalable), need to fix
-`;
-
-const VideoWrap = styled.span`
-    width: ${props => props.width};
-    vertical-align: top;
-    margin: ${props => props.margin};
-    padding: 0%;
-    font-size: 30px;
-    display: inline-block;
-    text-align: justify;
-    white-space: pre-line;
 `;
 
 const ParagraphWrap = styled.span`
+    background: white;
     width: ${props => props.width};
     vertical-align: top;
     margin: ${props => props.margin};
-    padding: 0% 8%;
+    padding: 8%;
     font-size: 30px;
     display: inline-block;
     text-align: justify;
@@ -88,4 +78,4 @@ const Heading = styled.h1`
     text-align: center;
 `;
 
-export { ModuleContent1_7 };
+export { SkinTherapy1 };

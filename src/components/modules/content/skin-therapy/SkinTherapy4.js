@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import ReactPlayer from 'react-player'
 import video from './videos/4.mp4';
 
-const ModuleContent1_4 = () => {
+const SkinTherapy4 = () => {
     const navigate = useNavigate();
     return (
         <Wrap>
@@ -31,7 +31,7 @@ const ModuleContent1_4 = () => {
                 variant="dark"
                 onClick={() => {
                     // When the user presses this button, navigate them back to the module selection page
-                    navigate('/modules/content1/3');
+                    navigate('/modules/skin_therapy/3');
                 }}
                 style={{ margin: '0% 0% 4% 4%', height: "40px", width: "46%"}}
             >
@@ -42,7 +42,7 @@ const ModuleContent1_4 = () => {
                 variant="info"
                 onClick={() => {
                     // When the user presses this button, navigate them to the next page
-                    navigate('/modules/content1/5');
+                    navigate('/modules/skin_therapy/5');
                 }}
                 style={{ margin: '0% 4% 4% 0%', height: "40px", width: "46%"}}
             >
@@ -72,21 +72,10 @@ const VideoWrap = styled.span`
     white-space: pre-line;
 `;
 
-const ParagraphWrap = styled.span`
-    width: ${props => props.width};
-    vertical-align: top;
-    margin: ${props => props.margin};
-    padding: 0% 8%;
-    font-size: 30px;
-    display: inline-block;
-    text-align: justify;
-    white-space: pre-line;
-`;
-
 const Heading = styled.h1`
     padding-top: 1em;
     font-size:50px;
     text-align: center;
 `;
 
-export { ModuleContent1_4 };
+export { SkinTherapy4 };

@@ -6,7 +6,7 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import ChangingProgressProvider from '../../../utils/ChangingProgressProvider';
 
-const Module1QuizResult = () => {
+const SkinTherapyQuizResult = () => {
     const navigate = useNavigate();
     
     // Retrieve state data from quiz page
@@ -104,4 +104,4 @@ const HeadingWrap = styled.h1`
     padding-bottom: 10px;
 `;
 
-export {Module1QuizResult};
+export { SkinTherapyQuizResult };

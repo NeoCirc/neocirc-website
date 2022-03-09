@@ -4,10 +4,10 @@ import styled from 'styled-components';
 import Card from 'react-bootstrap/Card';
 import { useState } from 'react';
 
-const ModuleQuizPage = () => {
+const SkinTherapyQuizPage = () => {
     const navigate = useNavigate();
     const [userAnswers, setUserAnswers] = useState([]);
-    const [checked, setChecked] = useState(false);
+    const [ready, setReady] = useState(false);
 
     // useLocation hook will be used to retrieve the current path of the page.
     // useLocation can also be used to retrieve data from the path.
@@ -42,6 +42,7 @@ const ModuleQuizPage = () => {
                         onChange={() => {
                             userAnswers[i] = true;
                             setUserAnswers(userAnswers);
+                            setReady((userAnswers.length === 3) && (!userAnswers.includes(undefined)));
                         }}
                     /> True
                     <br></br>
@@ -52,7 +53,7 @@ const ModuleQuizPage = () => {
                         onChange={() => {
                             userAnswers[i] = false;
                             setUserAnswers(userAnswers);
-                            setChecked(!checked)
+                            setReady((userAnswers.length === 3) && (!userAnswers.includes(undefined)));
                         }}/> False
                     <br></br>
                     <br></br>
@@ -73,16 +74,7 @@ const ModuleQuizPage = () => {
             <Card style={{ width: '100%' }}>
                 <Card.Body>
                 <HeadingWrap>
-                    <center>Module 1 Quiz</center>        
-                    <Button
-                    as={Col}
-                    onClick={() => {
-                        navigate('/modules/content1/1');
-                    }}
-                    style={{ float: 'right', marginTop: '-45px'}}
-                >
-                    Return
-                </Button>
+                    <center>Module 1 Quiz</center>
                 </HeadingWrap>
                 
                 {generateQuestions()}
@@ -102,7 +94,7 @@ const ModuleQuizPage = () => {
                             );
                         }}
                         // Only if it's ready to submit, allow the user to click
-                        style={readyToSubmit ? {} : {pointerEvents: 'none'}}
+                        style={ready ? {} : {pointerEvents: 'none'}}
                     >
                         Submit Quiz
                     </Button>
@@ -122,6 +114,6 @@ const HeadingWrap = styled.h1`
     padding-bottom: 10px;
 `;
 
-export {ModuleQuizPage};
+export { SkinTherapyQuizPage };
 
 
