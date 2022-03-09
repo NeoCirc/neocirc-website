@@ -24,9 +24,6 @@ const SkinTherapyQuizPage = () => {
     // TODO: Put all these answers in a global storage
     const correctAnswers = [false, true, true];
 
-    // Boolean for determining if the answers are ready to submit
-    const readyToSubmit = (userAnswers.length === 3) && (!userAnswers.includes(undefined));
-
     const generateQuestions = () => {
         const tfQuestions = [];
         for (let i = 0; i < 3; i++) {
@@ -42,6 +39,7 @@ const SkinTherapyQuizPage = () => {
                         onChange={() => {
                             userAnswers[i] = true;
                             setUserAnswers(userAnswers);
+                            // Boolean for determining if the answers are ready to submit
                             setReady((userAnswers.length === 3) && (!userAnswers.includes(undefined)));
                         }}
                     /> True

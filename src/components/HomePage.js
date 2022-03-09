@@ -9,7 +9,6 @@ const HomePage = () => {
     // useNavigate hook will be used to programmatically route the user based on their actions
     const navigate = useNavigate();
     return (
-        
         <Wrap>     
             <Heading>
                <strong>NeoCirc</strong>
@@ -25,14 +24,16 @@ const HomePage = () => {
             <CardGroup>
             <Card>
                 <Card.Body>
-                <center><Card.Title>The NeoCirc Experience</Card.Title></center>
-                <Card.Text>
+                <Center><Card.Title>The NeoCirc Experience</Card.Title></Center>
+                <Center>
                     <br></br>
-                    <center>We strive to offer the most intimate and personalized experience possible, to do so we need to know more about you.</center>
+                        <Card.Text>
+                            We strive to offer the most intimate and personalized experience possible, to do so we need to know more about you.
+                        </Card.Text>
                     <br></br>
-                    <center><i>Which best describes you?</i></center>
-                    <br></br>
-                    <center>
+                        <Card.Text>
+                            <i>Which best describes you?</i>
+                        </Card.Text>
                     <Button as={Col}
                         variant="primary"
                         onClick={() => {
@@ -41,15 +42,16 @@ const HomePage = () => {
                     }}
                     >I am a Parent</Button>{' '}
                     <Button as={Col}
-                    variant="dark"
-                    onClick={() => {
-                        // When this button is clicked, route the user to the module selection page
-                        navigate('/modules');
-                    }}
-                    >I am a Doctor</Button>
-                    </center>
-
-                </Card.Text>
+                        variant="dark"
+                        onClick={() => {
+                            // When this button is clicked, route the user to the module selection page
+                            navigate('/modules');
+                        }}
+                        disabled
+                    >
+                        I am a Doctor
+                    </Button>
+                </Center>
                 </Card.Body>
                 
             </Card>
@@ -58,6 +60,10 @@ const HomePage = () => {
         </Wrap>
     );
 };
+
+const Center = styled.div`
+    text-align: center;
+`;
 
 const Wrap = styled.div`
     width: 90vw;
