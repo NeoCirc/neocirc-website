@@ -33,14 +33,20 @@ const ModuleSelectionPage = () => {
             <Card>
                 <Card.Header><BsFillLockFill color="black" size={20}/>  Module 2</Card.Header>
                 <Card.Body>
-                    <Card.Text>
-                        <center>Coming soon! Will be added in the future. </center>
-                    </Card.Text>
+                    <Center>
+                        <Card.Text>
+                            Coming soon! Will be added in the future.
+                        </Card.Text>
+                    </Center>
                 </Card.Body>
             </Card>
         </Wrap>
     );
 };
+
+const Center = styled.div`
+    text-align: center;
+`;
 
 const Wrap = styled.div`
     margin: 0px 50px 50px 50px;

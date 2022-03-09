@@ -28,7 +28,7 @@ const SkinTherapyQuizPage = () => {
         const tfQuestions = [];
         for (let i = 0; i < 3; i++) {
             tfQuestions.push(
-                <form>
+                <form key={i}>
                     <br></br>
                         {tfQuestionBank[i]}
                     <br></br>
