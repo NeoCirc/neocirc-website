@@ -15,14 +15,14 @@ const SkinTherapyQuizPage = () => {
 
     // Question bank for quiz 1
     const tfQuestionBank = [
-        'Q1.  Wound care after circumcision should be performed with antibiotic ointment otherwise infection might occur.',
-        'Q2.  Frequent gentle retraction on the base of the penis after neonatal circumcision will decrease the chances of penile skin adhesions development.',
-        'Q3.  If penile skin bands develop, surgical revision of the circumcision will be required.',
+        'Q1.  Skin care after circumcision includes application of ointment as directed by your care team.',
+        'Q2.  Skin retraction as you viewed in the video after your boy\'s circumcision decreases the chances of penile skin adhesions/band.',
+        'Q3.  If penile skin bands develop, surgical revision will be required.',
     ];
 
     // Correct answers for quiz 1
     // TODO: Put all these answers in a global storage
-    const correctAnswers = [false, true, true];
+    const correctAnswers = [true, true, true];
 
     const generateQuestions = () => {
         const tfQuestions = [];
