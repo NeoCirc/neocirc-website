@@ -3,9 +3,9 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import { useNavigate } from 'react-router-dom';
 import ReactPlayer from 'react-player'
-import video from './videos/6.mp4';
+import video from './videos/7.mp4';
 
-const ModuleContent1_6 = () => {
+const SkinTherapy7 = () => {
     const navigate = useNavigate();
     return (
         <Wrap>
@@ -29,7 +29,7 @@ const ModuleContent1_6 = () => {
                 variant="dark"
                 onClick={() => {
                     // When the user presses this button, navigate them back to the module selection page
-                    navigate('/modules/content1/5');
+                    navigate('/modules/skin_therapy/6');
                 }}
                 style={{ margin: '0% 0% 4% 4%', height: "40px", width: "46%"}}
             >
@@ -39,12 +39,12 @@ const ModuleContent1_6 = () => {
                 as={Col}
                 variant="info"
                 onClick={() => {
-                    // When the user presses this button, navigate them to the next page
-                    navigate('/modules/content1/7');
+                    // When the user presses this button, navigate them to the quiz page
+                    navigate('/modules/skin_therapy/quiz');
                 }}
                 style={{ margin: '0% 4% 4% 0%', height: "40px", width: "46%"}}
             >
-                Next
+                Take Quiz
             </Button>
         </Wrap>
     )
@@ -71,21 +71,10 @@ const VideoWrap = styled.span`
     white-space: pre-line;
 `;
 
-const ParagraphWrap = styled.span`
-    width: ${props => props.width};
-    vertical-align: top;
-    margin: ${props => props.margin};
-    padding: 0% 8%;
-    font-size: 30px;
-    display: inline-block;
-    text-align: justify;
-    white-space: pre-line;
-`;
-
 const Heading = styled.h1`
     padding-top: 1em;
     font-size:50px;
     text-align: center;
 `;
 
-export { ModuleContent1_6 };
+export { SkinTherapy7 };

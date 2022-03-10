@@ -2,36 +2,34 @@ import styled from 'styled-components';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import { useNavigate } from 'react-router-dom';
-import ReactAudioPlayer from 'react-audio-player'
-import audio from './audio/2.mp3';
+import ReactPlayer from 'react-player'
+import video from './videos/6.mp4';
 
-const ModuleContent1_2 = () => {
+const SkinTherapy6 = () => {
     const navigate = useNavigate();
     return (
         <Wrap>
             <Heading>
-                For Families Who Choose Circumcision
+                Why Skin Therapy?
             </Heading>
 
-            <ParagraphWrap width="92%" margin="4% 4%">
-                {"Parents and Caregivers:\n\n" +
-                "   Learn simple skin therapy techniques\n\n" +
-                "   Prevent common problems with healing\n\n" +
-                "   Easy."}
-            </ParagraphWrap>
-
-            <ReactAudioPlayer
-                src={audio}
-                style={{ margin: '2% 4%', width: '92%' }}
-                controls
-            />
+            <VideoWrap width="50%" margin="4% 25%">
+                <ReactPlayer
+                    className='react-player'
+                    url={video}
+                    controls={true}
+                    width='100%'
+                    height='100%'
+                />
+                Keep success by skin therapy.
+            </VideoWrap>
 
             <Button
                 as={Col}
                 variant="dark"
                 onClick={() => {
                     // When the user presses this button, navigate them back to the module selection page
-                    navigate('/modules/content1/1');
+                    navigate('/modules/skin_therapy/5');
                 }}
                 style={{ margin: '0% 0% 4% 4%', height: "40px", width: "46%"}}
             >
@@ -42,7 +40,7 @@ const ModuleContent1_2 = () => {
                 variant="info"
                 onClick={() => {
                     // When the user presses this button, navigate them to the next page
-                    navigate('/modules/content1/3');
+                    navigate('/modules/skin_therapy/7');
                 }}
                 style={{ margin: '0% 4% 4% 0%', height: "40px", width: "46%"}}
             >
@@ -59,15 +57,14 @@ const ModuleContent1_2 = () => {
 const Wrap = styled.div`
     background: linear-gradient(to bottom, #99ccff 0%, #ffccff 100%);
     margin: 0px 50px 50px 50px;
-    width: 150%; //bad solution (not scalable), need to fix
+    width: 180%; //bad solution (not scalable), need to fix
 `;
 
-const ParagraphWrap = styled.span`
-    background: white;
+const VideoWrap = styled.span`
     width: ${props => props.width};
     vertical-align: top;
     margin: ${props => props.margin};
-    padding: 8%;
+    padding: 0%;
     font-size: 30px;
     display: inline-block;
     text-align: justify;
@@ -80,4 +77,4 @@ const Heading = styled.h1`
     text-align: center;
 `;
 
-export { ModuleContent1_2 };
+export { SkinTherapy6 };

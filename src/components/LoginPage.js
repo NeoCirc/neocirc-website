@@ -32,14 +32,14 @@ const LoginPage = ({ onSuccessfulSubmit }) => {
       <Card>
         <Card.Body>
           <h2>Please enter a verification code</h2>
-          <div class="form-group">
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your code here" value={userCode} onChange={e => setUserCode(e.target.value)} />
+          <div className="form-group">
+            <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Enter your code here" value={userCode} onChange={e => setUserCode(e.target.value)} />
           </div> <br />
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1" onChange={e => setAgreed(e.currentTarget.checked)} />
-            <label class="form-check-label" for="exampleCheck1">I agree to the terms and conditions.</label>
+          <div className="form-check">
+            <input type="checkbox" className="form-check-input" id="exampleCheck1" onChange={e => setAgreed(e.currentTarget.checked)} />
+            <label className="form-check-label">I agree to the terms and conditions.</label>
           </div> <br />
-          <button type="submit" class="btn btn-primary" onClick={onSubmit}> Submit </button>
+          <button type="submit" className="btn btn-primary" onClick={onSubmit}> Submit </button>
         </Card.Body>
       </Card>
     </Wrap>

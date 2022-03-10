@@ -3,9 +3,9 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import { useNavigate } from 'react-router-dom';
 import ReactAudioPlayer from 'react-audio-player'
-import audio from './audio/1.mp3';
+import audio from './audio/2.mp3';
 
-const ModuleContent1_1 = () => {
+const SkinTherapy2 = () => {
     const navigate = useNavigate();
     return (
         <Wrap>
@@ -14,14 +14,15 @@ const ModuleContent1_1 = () => {
             </Heading>
 
             <ParagraphWrap width="92%" margin="4% 4%">
-                {"Care of the penile shaft after circumcision is important for proper healing of the circumcision.\n\n" +
-                "Please follow the instructions for cleaning and dressing the circumcision site given to you by your provider. \n\n" +
-                "In this module, you will learn additional care critical to proper healing of the circumcision."}
+                {"Parents and Caregivers:\n\n" +
+                "   Learn simple skin therapy techniques\n\n" +
+                "   Prevent common problems with healing\n\n" +
+                "   Easy."}
             </ParagraphWrap>
 
             <ReactAudioPlayer
                 src={audio}
-                style={{margin: '2% 4%', width: '92%'}}
+                style={{ margin: '2% 4%', width: '92%' }}
                 controls
             />
 
@@ -30,7 +31,7 @@ const ModuleContent1_1 = () => {
                 variant="dark"
                 onClick={() => {
                     // When the user presses this button, navigate them back to the module selection page
-                    navigate('/modules');
+                    navigate('/modules/skin_therapy/1');
                 }}
                 style={{ margin: '0% 0% 4% 4%', height: "40px", width: "46%"}}
             >
@@ -40,8 +41,8 @@ const ModuleContent1_1 = () => {
                 as={Col}
                 variant="info"
                 onClick={() => {
-                    // When the user presses this button, navigate them to the next page in module
-                    navigate('/modules/content1/2');
+                    // When the user presses this button, navigate them to the next page
+                    navigate('/modules/skin_therapy/3');
                 }}
                 style={{ margin: '0% 4% 4% 0%', height: "40px", width: "46%"}}
             >
@@ -58,6 +59,7 @@ const ModuleContent1_1 = () => {
 const Wrap = styled.div`
     background: linear-gradient(to bottom, #99ccff 0%, #ffccff 100%);
     margin: 0px 50px 50px 50px;
+    width: 150%; //bad solution (not scalable), need to fix
 `;
 
 const ParagraphWrap = styled.span`
@@ -78,4 +80,4 @@ const Heading = styled.h1`
     text-align: center;
 `;
 
-export { ModuleContent1_1 };
+export { SkinTherapy2 };

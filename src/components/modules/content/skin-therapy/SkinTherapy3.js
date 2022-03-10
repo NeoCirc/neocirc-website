@@ -2,10 +2,12 @@ import styled from 'styled-components';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import { useNavigate } from 'react-router-dom';
-import ReactPlayer from 'react-player'
-import video from './videos/5.mp4';
+import srcImage from './images/3.jpg';
+import Image from 'react-bootstrap/Image';
+import ReactAudioPlayer from 'react-audio-player';
+import audio from './audio/3.mp3';
 
-const ModuleContent1_5 = () => {
+const SkinTherapy3 = () => {
     const navigate = useNavigate();
     return (
         <Wrap>
@@ -13,23 +15,23 @@ const ModuleContent1_5 = () => {
                 Learn Skin Therapy to Promote Healthy Healing After Circumcision
             </Heading>
 
-            <VideoWrap width="50%" margin="4% 25%">
-                <ReactPlayer
-                    className='react-player'
-                    url={video}
-                    controls={true}
-                    width='100%'
-                    height='100%'
-                />
-                Do at home after circumcision is done.
-            </VideoWrap>
+            <Image
+                style={{ margin: '4% 25%', width: '50%' }}
+                src={srcImage}
+            />
+
+            <ReactAudioPlayer
+                src={audio}
+                style={{ margin: '2% 4%', width: '92%' }}
+                controls
+            />
 
             <Button
                 as={Col}
                 variant="dark"
                 onClick={() => {
                     // When the user presses this button, navigate them back to the module selection page
-                    navigate('/modules/content1/4');
+                    navigate('/modules/skin_therapy/2');
                 }}
                 style={{ margin: '0% 0% 4% 4%', height: "40px", width: "46%"}}
             >
@@ -40,7 +42,7 @@ const ModuleContent1_5 = () => {
                 variant="info"
                 onClick={() => {
                     // When the user presses this button, navigate them to the next page
-                    navigate('/modules/content1/6');
+                    navigate('/modules/skin_therapy/4');
                 }}
                 style={{ margin: '0% 4% 4% 0%', height: "40px", width: "46%"}}
             >
@@ -59,32 +61,10 @@ const Wrap = styled.div`
     margin: 0px 50px 50px 50px;
 `;
 
-const VideoWrap = styled.span`
-    width: ${props => props.width};
-    vertical-align: top;
-    margin: ${props => props.margin};
-    padding: 0%;
-    font-size: 30px;
-    display: inline-block;
-    text-align: justify;
-    white-space: pre-line;
-`;
-
-const ParagraphWrap = styled.span`
-    width: ${props => props.width};
-    vertical-align: top;
-    margin: ${props => props.margin};
-    padding: 0% 8%;
-    font-size: 30px;
-    display: inline-block;
-    text-align: justify;
-    white-space: pre-line;
-`;
-
 const Heading = styled.h1`
     padding-top: 1em;
     font-size:50px;
     text-align: center;
 `;
 
-export { ModuleContent1_5 };
+export { SkinTherapy3 };
