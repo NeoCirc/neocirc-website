@@ -31,7 +31,7 @@ const SkinTherapy7 = () => {
                     // When the user presses this button, navigate them back to the module selection page
                     navigate('/modules/skin_therapy/6');
                 }}
-                style={{ margin: '0% 0% 4% 4%', height: "5vw", width: "46%", fontSize: "2vw" }}
+                style={{ margin: '0% 0% 4% 4%', height: "4vmax", width: "46%", fontSize: "2vmax" }}
             >
                 Back
             </Button>
@@ -42,7 +42,7 @@ const SkinTherapy7 = () => {
                     // When the user presses this button, navigate them to the quiz page
                     navigate('/modules/skin_therapy/quiz');
                 }}
-                style={{ margin: '0% 4% 4% 0%', height: "5vw", width: "46%", fontSize: "2vw" }}
+                style={{ margin: '0% 4% 4% 0%', height: "4vmax", width: "46%", fontSize: "2vmax" }}
             >
                 Take Quiz
             </Button>
@@ -57,7 +57,10 @@ const SkinTherapy7 = () => {
 const Wrap = styled.div`
     background: linear-gradient(to bottom, #99ccff 0%, #ffccff 100%);
     margin: 0px 3vw 50px 3vw;
-    width: 93.5%;
+    @media (max-width: 768px) {
+        margin: 0px;
+        border-radius: 0px;
+    }
 `;
 
 const VideoWrap = styled.span`
