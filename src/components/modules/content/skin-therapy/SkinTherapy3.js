@@ -33,7 +33,7 @@ const SkinTherapy3 = () => {
                     // When the user presses this button, navigate them back to the module selection page
                     navigate('/modules/skin_therapy/2');
                 }}
-                style={{ margin: '0% 0% 4% 4%', height: "40px", width: "46%"}}
+                style={{ margin: '0% 0% 4% 4%', height: "5vw", width: "46%", fontSize: "2vw" }}
             >
                 Back
             </Button>
@@ -44,7 +44,7 @@ const SkinTherapy3 = () => {
                     // When the user presses this button, navigate them to the next page
                     navigate('/modules/skin_therapy/4');
                 }}
-                style={{ margin: '0% 4% 4% 0%', height: "40px", width: "46%"}}
+                style={{ margin: '0% 4% 4% 0%', height: "5vw", width: "46%", fontSize: "2vw" }}
             >
                 Next
             </Button>
@@ -58,13 +58,15 @@ const SkinTherapy3 = () => {
 */
 const Wrap = styled.div`
     background: linear-gradient(to bottom, #99ccff 0%, #ffccff 100%);
-    margin: 0px 50px 50px 50px;
+    margin: 0px 3vw 50px 3vw;
+    width: 93.5%;
 `;
 
 const Heading = styled.h1`
     padding-top: 1em;
-    font-size:50px;
+    font-size:4vw;
     text-align: center;
+    margin: 0% 3%;
 `;
 
 export { SkinTherapy3 };

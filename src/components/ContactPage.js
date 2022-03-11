@@ -42,7 +42,7 @@ const SendMessageButton = styled(Button)`
 `;
 
 const Wrap = styled.div`
-    width: 50vw;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,7 +50,7 @@ const Wrap = styled.div`
     background: linear-gradient(to bottom, #99ccff 0%, #ffccff 100%);
     padding: 30px 0px 30px 0px;
     border-radius: 30px;
-    margin-left: 35%;
+    margin-left: 25%;
 `;
 
 const ContactForm = styled(Form)`

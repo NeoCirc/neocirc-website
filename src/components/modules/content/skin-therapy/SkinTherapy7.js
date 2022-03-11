@@ -31,7 +31,7 @@ const SkinTherapy7 = () => {
                     // When the user presses this button, navigate them back to the module selection page
                     navigate('/modules/skin_therapy/6');
                 }}
-                style={{ margin: '0% 0% 4% 4%', height: "40px", width: "46%"}}
+                style={{ margin: '0% 0% 4% 4%', height: "5vw", width: "46%", fontSize: "2vw" }}
             >
                 Back
             </Button>
@@ -42,7 +42,7 @@ const SkinTherapy7 = () => {
                     // When the user presses this button, navigate them to the quiz page
                     navigate('/modules/skin_therapy/quiz');
                 }}
-                style={{ margin: '0% 4% 4% 0%', height: "40px", width: "46%"}}
+                style={{ margin: '0% 4% 4% 0%', height: "5vw", width: "46%", fontSize: "2vw" }}
             >
                 Take Quiz
             </Button>
@@ -56,8 +56,8 @@ const SkinTherapy7 = () => {
 */
 const Wrap = styled.div`
     background: linear-gradient(to bottom, #99ccff 0%, #ffccff 100%);
-    margin: 0px 50px 50px 50px;
-    width: 180%; //bad solution (not scalable), need to fix
+    margin: 0px 3vw 50px 3vw;
+    width: 93.5%;
 `;
 
 const VideoWrap = styled.span`
@@ -65,7 +65,7 @@ const VideoWrap = styled.span`
     vertical-align: top;
     margin: ${props => props.margin};
     padding: 0%;
-    font-size: 30px;
+    font-size: 2vw;
     display: inline-block;
     text-align: justify;
     white-space: pre-line;
@@ -73,8 +73,9 @@ const VideoWrap = styled.span`
 
 const Heading = styled.h1`
     padding-top: 1em;
-    font-size:50px;
+    font-size:4vw;
     text-align: center;
+    margin: 0% 3%;
 `;
 
 export { SkinTherapy7 };
