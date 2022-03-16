@@ -82,7 +82,6 @@ const SkinTherapyQuizResult = () => {
                 variant="primary"
                 style={{
                     width: '25%',
-                    fontSize: '1.5vw',
                     marginLeft: 'auto',
                     marginTop: '20px',
                 }}

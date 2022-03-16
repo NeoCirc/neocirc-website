@@ -16,47 +16,43 @@ const HomePage = () => {
             <SubHeading2 width="95%">       
             <i>An educational platform leveraging e-learning to promote proficiency in medical procedures.</i>
             </SubHeading2>
-            <div style={{
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: '105px'
-            }}>
-            <CardGroup>
-            <Card>
-                <Card.Body>
-                <Center><Card.Title>The NeoCirc Experience</Card.Title></Center>
-                <Center>
-                    <br></br>
-                        <Card.Text>
-                            We strive to offer the most intimate and personalized experience possible, to do so we need to know more about you.
-                        </Card.Text>
-                    <br></br>
-                        <Card.Text>
-                            <i>Which best describes you?</i>
-                        </Card.Text>
-                    <Button as={Col}
-                        variant="primary"
-                        onClick={() => {
-                        // When this button is clicked, route the user to the module selection page
-                        navigate('/modules');
-                    }}
-                    >I am a Parent</Button>{' '}
-                    <Button as={Col}
-                        variant="dark"
-                        onClick={() => {
+            <CardWrap>
+                <CardGroup>
+                <Card>
+                    <Card.Body>
+                    <Center><Card.Title>The NeoCirc Experience</Card.Title></Center>
+                    <Center>
+                        <br></br>
+                            <Card.Text>
+                                We strive to offer the most intimate and personalized experience possible, to do so we need to know more about you.
+                            </Card.Text>
+                        <br></br>
+                            <Card.Text>
+                                <i>Which best describes you?</i>
+                            </Card.Text>
+                        <Button as={Col}
+                            variant="primary"
+                            onClick={() => {
                             // When this button is clicked, route the user to the module selection page
                             navigate('/modules');
                         }}
-                        disabled
-                    >
-                        I am a Doctor
-                    </Button>
-                </Center>
-                </Card.Body>
-                
-            </Card>
-            </CardGroup>
-            </div>    
+                        >I am a Parent</Button>{' '}
+                        <Button as={Col}
+                            variant="dark"
+                            onClick={() => {
+                                // When this button is clicked, route the user to the module selection page
+                                navigate('/modules');
+                            }}
+                            disabled
+                        >
+                            I am a Doctor
+                        </Button>
+                    </Center>
+                    </Card.Body>
+                    
+                </Card>
+                </CardGroup>
+            </CardWrap>    
         </Wrap>
     );
 };
@@ -71,6 +67,20 @@ const Wrap = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    @media (max-width: 768px) {
+        padding-top: 0px;
+        display: flex;
+        margin: auto;
+    }
+`;
+
+const CardWrap = styled.div`
+    align-items: center;
+    justify-content: center;
+    padding: 105px;
+    @media (max-width: 768px) {
+        padding: 0px;
+    }
 `;
 
 const Heading = styled.h1`

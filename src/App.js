@@ -90,6 +90,8 @@ const Wrap = styled.div`
 
 const ContentWrap = styled.div`
   padding-top: 50px;
+  height: 100%;
+  width: 100%;
   @media (max-width: 768px) {
     padding-top: 80px;
     display: flex;
