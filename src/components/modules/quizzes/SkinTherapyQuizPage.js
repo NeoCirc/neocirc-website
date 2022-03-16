@@ -106,6 +106,10 @@ const SkinTherapyQuizPage = () => {
 const Wrap = styled.div`
     margin: 0px 50px 50px 50px;
     display: flex;
+    @media (max-width: 768px) {
+        margin: 0px;
+        border-radius: 0px;
+    }
 `;
 
 const HeadingWrap = styled.h1`
