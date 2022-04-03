@@ -59,8 +59,8 @@ const SideBar = () => {
 }
 
 const SideBarWrap = styled(ProSidebar)`
-    height: 100vh;
-    position: fixed;
+    min-height: 100vh;
+    height: 100%;
 `;
 
 const FooterWrap = styled.div`

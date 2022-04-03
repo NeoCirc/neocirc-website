@@ -94,7 +94,6 @@ const ContentWrap = styled.div`
 `;
 
 const SideBarWrap = styled.div`
-  padding-right: 80px;
   @media (max-width: 768px) {
     padding-right: 0px;
   }
