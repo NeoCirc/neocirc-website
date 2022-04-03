@@ -9,6 +9,12 @@ const SideBar = () => {
     const [collapsed, setCollapsed] = useState(true);
     const [toggled, setToggled] = useState(false);
     const navigate = useNavigate();
+    const clickSidebarContent = (path) => {
+        if (!collapsed) {
+            setCollapsed(true);
+        }
+        navigate(path);
+    }
     return (<>
         {!toggled && <ToggleBurger>
             <ToggleButton onClick={() => {
@@ -42,19 +48,31 @@ const SideBar = () => {
             </SideBarHeaderWrap>
             <SidebarContent>
                 <Menu iconShape="square">
-                    <MenuItem icon={<FaHome />} onClick={() => navigate('/')}>Home</MenuItem>
-                    <MenuItem icon={<FaInfo />} onClick={() => navigate('/about')}>About Us</MenuItem>
+                    <MenuItem icon={<FaHome />} onClick={() => clickSidebarContent('/')}>Home</MenuItem>
+                    <MenuItem icon={<FaInfo />} onClick={() => clickSidebarContent('/about')}>About Us</MenuItem>
                     <SubMenu title="FAQ" icon={<FaQuestion />} >
                         <MenuItem onClick={() => navigate('/GenFAQPage')}>General</MenuItem>
                     </SubMenu>
-                    <MenuItem icon={<FaFolder />} onClick={() => navigate('/sources')}>Source</MenuItem>
-                    <MenuItem icon={<FaMailBulk />} onClick={() => navigate('/contact')}>Contact Us!</MenuItem>
+                    <MenuItem icon={<FaFolder />} onClick={() => clickSidebarContent('/source')}>Source</MenuItem>
+                    <MenuItem icon={<FaMailBulk />} onClick={() => clickSidebarContent('/contact')}>Contact Us!</MenuItem>
                 </Menu>
             </SidebarContent>
             {collapsed ? null : <SidebarFooter>
                 <FooterWrap>NeoCirc LLC</FooterWrap>
             </SidebarFooter>}
         </SideBarWrap>
+        {!collapsed && <OverlayDiv onClick={() => {
+            if (toggled) {
+                if (collapsed === false) {
+                    setCollapsed(true);
+                }
+                setToggled(!toggled);
+            } else {
+                setCollapsed(!collapsed);
+            }
+        }}>
+            Testing    
+        </OverlayDiv>}
     </>);
 }
 
@@ -108,6 +126,16 @@ const ToggleBurger = styled.div`
 
 const ToggleButton = styled(Button)`
     padding: 15px;
+`;
+
+const OverlayDiv = styled.div`
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 100;
 `;
 
 export { SideBar };
