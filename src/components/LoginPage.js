@@ -7,17 +7,16 @@ import { useNavigate } from 'react-router-dom';
 const LoginPage = ({ onSuccessfulSubmit }) => {
   const [userCode, setUserCode] = useState('')
   const [agreed, setAgreed] = useState(false)
-  // const secretCode = 'test';
   const salt = 'da0841dd79701200e4';
   const crypto = require('crypto');
-  const hash = '56fd2f133ac2ea533843f23c2f1b6fafc7daa8bbd10fca642003ff9dc5dbdc22bb90b2ce31fab64490dc82af7504522f98d928c0225e96fb967de7d73a6825c9';
+  const hash = 'ca7d1242ceee35a47edfbbebc008975efba1439cedd08bad381ccd371131224eedd9f32babafcc70616d76c76f2019536e5cae437104b5ded4b2272a94067662';
   let hashedUserCode;
   const navigate = useNavigate();
 
   const onSubmit = (e) => {
     e.preventDefault()
 
-      hashedUserCode = crypto.pbkdf2Sync(userCode, salt, 100, 64, 'sha512', (err, derivedKey) => {
+      hashedUserCode = crypto.pbkdf2Sync(userCode, salt, 10000, 64, 'sha512', (err, derivedKey) => {
 
           if (err) throw err;
 
