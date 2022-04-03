@@ -70,15 +70,16 @@ const SideBar = () => {
             } else {
                 setCollapsed(!collapsed);
             }
-        }}>
-            Testing    
-        </OverlayDiv>}
+        }} />}
     </>);
 }
 
 const SideBarWrap = styled(ProSidebar)`
-    min-height: 100vh;
-    height: 100%;
+    height: 100vh;
+    position: fixed;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 `;
 
 const FooterWrap = styled.div`
