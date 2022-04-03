@@ -51,6 +51,11 @@ const Wrap = styled.div`
     padding: 30px 0px 30px 0px;
     border-radius: 30px;
     margin-left: 25%;
+    @media (max-width: 768px) {
+        width: 100%;
+        margin-left: 0%;
+        border-radius: 0px;
+    }
 `;
 
 const ContactForm = styled(Form)`
