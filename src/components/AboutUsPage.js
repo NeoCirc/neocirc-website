@@ -37,6 +37,7 @@ const ParagraphWrap = styled.span`
     font-size: 25px;
     display: inline-block;
     text-align: justify;
+    padding-bottom: 5em;
 `;
 
 const Heading = styled.h1`
