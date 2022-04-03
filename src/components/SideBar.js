@@ -46,8 +46,6 @@ const SideBar = () => {
                     <MenuItem icon={<FaInfo />} onClick={() => navigate('/about')}>About Us</MenuItem>
                     <SubMenu title="FAQ" icon={<FaQuestion />} >
                         <MenuItem onClick={() => navigate('/GenFAQPage')}>General</MenuItem>
-                        <MenuItem onClick={() => navigate('/DocFAQPage')}>Doctors</MenuItem>
-                        <MenuItem onClick={() => navigate('/ParFAQPage')}>Parents</MenuItem>
                     </SubMenu>
                     <MenuItem icon={<FaFolder />} onClick={() => navigate('/sources')}>Source</MenuItem>
                     <MenuItem icon={<FaMailBulk />} onClick={() => navigate('/contact')}>Contact Us!</MenuItem>
