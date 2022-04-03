@@ -10,8 +10,13 @@ const SideBar = () => {
     const [toggled, setToggled] = useState(false);
     const navigate = useNavigate();
     const clickSidebarContent = (path) => {
-        if (!collapsed) {
-            setCollapsed(true);
+        if (toggled) {
+            if (collapsed === false) {
+                setCollapsed(true);
+            }
+            setToggled(!toggled);
+        } else {
+            setCollapsed(!collapsed);
         }
         navigate(path);
     }
@@ -53,7 +58,7 @@ const SideBar = () => {
                     <SubMenu title="FAQ" icon={<FaQuestion />} >
                         <MenuItem onClick={() => navigate('/GenFAQPage')}>General</MenuItem>
                     </SubMenu>
-                    <MenuItem icon={<FaFolder />} onClick={() => clickSidebarContent('/source')}>Source</MenuItem>
+                    <MenuItem icon={<FaFolder />} onClick={() => clickSidebarContent('/sources')}>Source</MenuItem>
                     <MenuItem icon={<FaMailBulk />} onClick={() => clickSidebarContent('/contact')}>Contact Us!</MenuItem>
                 </Menu>
             </SidebarContent>
