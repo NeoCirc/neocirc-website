@@ -7,15 +7,24 @@ import { useNavigate } from 'react-router-dom';
 const LoginPage = ({ onSuccessfulSubmit }) => {
   const [userCode, setUserCode] = useState('')
   const [agreed, setAgreed] = useState(false)
-  const secretCode = "test";
+  const salt = 'da0841dd79701200e4';
+  const crypto = require('crypto');
+  const hash = 'ca7d1242ceee35a47edfbbebc008975efba1439cedd08bad381ccd371131224eedd9f32babafcc70616d76c76f2019536e5cae437104b5ded4b2272a94067662';
+  let hashedUserCode;
   const navigate = useNavigate();
-
 
   const onSubmit = (e) => {
     e.preventDefault()
 
-    if (userCode !== secretCode) {
-      alert("Incorrect code ");
+      hashedUserCode = crypto.pbkdf2Sync(userCode, salt, 10000, 64, 'sha512', (err, derivedKey) => {
+
+          if (err) throw err;
+
+          return derivedKey;
+      }).toString('hex');
+
+      if (hashedUserCode !== hash) {
+      alert("Incorrect code");
       return;
     }
     if (!agreed) {
