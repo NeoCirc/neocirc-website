@@ -1,5 +1,5 @@
 import { ProSidebar, Menu, MenuItem, SubMenu, SidebarHeader, SidebarFooter, SidebarContent } from 'react-pro-sidebar';
-import { FaBars, FaQuestion, FaFolder, FaHome, FaInfo, FaMailBulk } from 'react-icons/fa';
+import { FaBars, FaQuestion, FaHome, FaInfo, FaMailBulk } from 'react-icons/fa';
 import { Button } from 'react-bootstrap';
 import styled from 'styled-components';
 import { useState } from 'react';
@@ -10,13 +10,11 @@ const SideBar = () => {
     const [toggled, setToggled] = useState(false);
     const navigate = useNavigate();
     const clickSidebarContent = (path) => {
-        if (toggled) {
-            if (collapsed === false) {
-                setCollapsed(true);
-            }
-            setToggled(!toggled);
-        } else {
-            setCollapsed(!collapsed);
+        if (collapsed === false) {
+            setCollapsed(true);
+        }
+        if (toggled === true) {
+            setToggled(false);
         }
         navigate(path);
     }
@@ -56,9 +54,8 @@ const SideBar = () => {
                     <MenuItem icon={<FaHome />} onClick={() => clickSidebarContent('/')}>Home</MenuItem>
                     <MenuItem icon={<FaInfo />} onClick={() => clickSidebarContent('/about')}>About Us</MenuItem>
                     <SubMenu title="FAQ" icon={<FaQuestion />} >
-                        <MenuItem onClick={() => navigate('/GenFAQPage')}>General</MenuItem>
+                        <MenuItem onClick={() => clickSidebarContent('/GenFAQPage')}>General</MenuItem>
                     </SubMenu>
-                    <MenuItem icon={<FaFolder />} onClick={() => clickSidebarContent('/sources')}>Source</MenuItem>
                     <MenuItem icon={<FaMailBulk />} onClick={() => clickSidebarContent('/contact')}>Contact Us!</MenuItem>
                 </Menu>
             </SidebarContent>
