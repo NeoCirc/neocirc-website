@@ -24,7 +24,7 @@ const HomePage = () => {
                     <Center>
                         <br></br>
                             <Card.Text>
-                                We strive to offer the most intimate and personalized experience possible, to do so we need to know more about you.
+                                We strive to offer the most personalized experience possible, to do so we need to know more about you.
                             </Card.Text>
                         <br></br>
                             <Card.Text>

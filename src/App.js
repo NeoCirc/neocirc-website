@@ -15,7 +15,6 @@ import { SkinTherapy7 } from './components/modules/content/skin-therapy/SkinTher
 
 import { SkinTherapyQuizPage } from './components/modules/quizzes/SkinTherapyQuizPage';
 import { SkinTherapyQuizResult } from './components/modules/quizzes/SkinTherapyQuizResult';
-import { SourcesPage } from './components/SourcesPage';
 import { LoginPage } from './components/LoginPage';
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
@@ -37,7 +36,6 @@ const App = () => {
             <Route path="/GenFAQPage" element={<GenFAQPage />} />
             <Route path="/about" element={<AboutUsPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/sources" element={<SourcesPage />} />
 
             { /* Module selection page */}
             <Route path="/modules" element={<ModuleSelectionPage />} />
@@ -63,7 +61,6 @@ const App = () => {
           <Route path="/GenFAQPage" element={<GenFAQPage />} />
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/sources" element={<SourcesPage />} />
 
           <Route path="/modules" element={
             <LoginPage onSuccessfulSubmit={(e) => {

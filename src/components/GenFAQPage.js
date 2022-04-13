@@ -11,15 +11,21 @@ const GenFAQPage = () => {
             </Heading>
             <Accordion>
                 <Accordion.Item eventKey="0">
-                    <Accordion.Header>Question #1</Accordion.Header>
+                    <Accordion.Header><b><i>What percentage of boys experience complications following newborn circumcision?</i></b></Accordion.Header>
                     <Accordion.Body>
-                        Answer
+                    Around 5% of boys who are circumcised as newborns experience complications requiring surgical repair.
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
-                    <Accordion.Header>Question #2</Accordion.Header>
+                    <Accordion.Header><b><i>What are the consequences of newborn circumcision complications?</i></b></Accordion.Header>
                     <Accordion.Body>
-                        Answer
+                    Complications from newborn circumcision can put unnecessary financial and emotional stress on a family. Additionally, boys may require anesthesia to correct certain types of complications.
+                    </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="2">
+                    <Accordion.Header><b><i>Who is NeoCirc for?</i></b></Accordion.Header>
+                    <Accordion.Body>
+                    We have multiple modules targeting different stages of care for the newborn boy both before, during, and after circumcision. There are modules intended for the healthcare providers as well as the parents.
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
